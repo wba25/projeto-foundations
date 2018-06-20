@@ -6,4 +6,8 @@
 //  Copyright © 2018 AcademyFoundations. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class PedidoTableCell: UITableViewCell {
+    
+}
