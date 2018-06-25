@@ -1,15 +1,7 @@
-//
-//  ViewController.swift
-//  projeto-foundations
-//
-//  Created by Lucas Biagini on 20/06/18.
-//  Copyright © 2018 AcademyFoundations. All rights reserved.
-//
-
 import UIKit
 
 class OrderViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet weak var pedidosTableView: UITableView!
     
     lazy var orders: [Order] = [
@@ -19,18 +11,20 @@ class OrderViewController: UIViewController, UITableViewDataSource, UITableViewD
         Order(thumbnail:UIImage(named:"image4")!, id:1, name:"Roteador", price:30.0, created_at:"12/06/2018", updated_at:"12/06/2018", status: "Aguardando Impressão")
     ]
     
+    var currOrder: Order = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.pedidosTableView.delegate = self
         self.pedidosTableView.dataSource = self
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return orders.count
     }
@@ -49,5 +43,12 @@ class OrderViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 91
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.currOrder = orders[indexPath.row]
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        <#code#>
+    }
 }
-
