@@ -11,7 +11,7 @@ class OrderViewController: UIViewController, UITableViewDataSource, UITableViewD
         Order(thumbnail:UIImage(named:"image4")!, id:1, name:"Roteador", price:30.0, created_at:"12/06/2018", updated_at:"12/06/2018", status: "Aguardando Impressão")
     ]
     
-    var currOrder: Order = nil
+//    var currOrder: Order = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,11 +44,11 @@ class OrderViewController: UIViewController, UITableViewDataSource, UITableViewD
         return 91
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.currOrder = orders[indexPath.row]
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        self.currOrder = orders[indexPath.row]
+//    }
+//    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        <#code#>
+//    }
 }
