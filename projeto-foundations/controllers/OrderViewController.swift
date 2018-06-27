@@ -5,10 +5,9 @@ class OrderViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var pedidosTableView: UITableView!
     
     lazy var orders: [Order] = [
-        Order(thumbnail:UIImage(named:"image1")!, id:1, name:"Galinha", price:30.0, created_at:"12/06/2018", updated_at:"12/06/2018", status: "Aguardando Impressão"),
-        Order(thumbnail:UIImage(named:"image2")!, id:1, name:"Barragem", price:30.0, created_at:"12/06/2018", updated_at:"12/06/2018", status: "Aguardando Impressão"),
-        Order(thumbnail:UIImage(named:"image3")!, id:1, name:"Privada", price:30.0, created_at:"12/06/2018", updated_at:"12/06/2018", status: "Aguardando Impressão"),
-        Order(thumbnail:UIImage(named:"image4")!, id:1, name:"Roteador", price:30.0, created_at:"12/06/2018", updated_at:"12/06/2018", status: "Aguardando Impressão")
+        Order(thumbnail:UIImage(named:"yoda")!, id:1, name:"Yoda", price:350.0, created_at:"12/06/2018", updated_at:"26/06/2018", status: "Imprimindo"),
+        Order(thumbnail:UIImage(named:"groot")!, id:1, name:"Groot", price:300.0, created_at:"25/05/2018", updated_at:"12/06/2018", status: "Saiu para entrega"),
+        Order(thumbnail:UIImage(named:"plier")!, id:1, name:"Extrovenga", price:320.0, created_at:"24/04/2018", updated_at:"12/06/2018", status: "Entrege")
     ]
     
 //    var currOrder: Order = nil
@@ -35,13 +34,13 @@ class OrderViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.thumbnail.image = orders[indexPath.row].thumbnail
         cell.name.text = orders[indexPath.row].name
         cell.date.text = orders[indexPath.row].created_at
-        cell.price.text = String(orders[indexPath.row].price)
+        cell.status.text = String(orders[indexPath.row].status)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 91
+        return 175
     }
     
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

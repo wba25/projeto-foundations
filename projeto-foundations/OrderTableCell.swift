@@ -12,6 +12,6 @@ class OrderTableCell: UITableViewCell {
     
     @IBOutlet weak var thumbnail: UIImageView!
     @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var status: UILabel!
     @IBOutlet weak var date: UILabel!
 }
