@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		364576B420E3D72B005E800A /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364576B320E3D72B005E800A /* Job.swift */; };
+		36A2D2F820E3D380002FD00E /* JobTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A2D2F720E3D380002FD00E /* JobTableCell.swift */; };
 		97466DB320E11BCB0074F960 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97466DB220E11BCB0074F960 /* OrderViewController.swift */; };
 		97466DB520E11F1F0074F960 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97466DB420E11F1F0074F960 /* HomeViewController.swift */; };
 		97466DB720E11F310074F960 /* JobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97466DB620E11F310074F960 /* JobViewController.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		364576B320E3D72B005E800A /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		36A2D2F720E3D380002FD00E /* JobTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableCell.swift; sourceTree = "<group>"; };
 		97466DB220E11BCB0074F960 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		97466DB420E11F1F0074F960 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		97466DB620E11F310074F960 /* JobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 				97CB544E20E113D8006E57A9 /* Order.swift */,
 				97ED4EB720E2C9720031648C /* Category.swift */,
 				97ED4EB920E2C97C0031648C /* Thing.swift */,
+				364576B320E3D72B005E800A /* Job.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 				97F50FC520DAA1AB00435DFC /* OrderTableCell.swift */,
 				97D105B620E2C81600A691AE /* CategoryTableViewCell.swift */,
 				97ED4EB520E2C8C80031648C /* ThingCollectionViewCell.swift */,
+				36A2D2F720E3D380002FD00E /* JobTableCell.swift */,
 			);
 			path = "projeto-foundations";
 			sourceTree = "<group>";
@@ -299,9 +305,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36A2D2F820E3D380002FD00E /* JobTableCell.swift in Sources */,
 				97466DB520E11F1F0074F960 /* HomeViewController.swift in Sources */,
 				97ED4EB820E2C9720031648C /* Category.swift in Sources */,
 				97F50F9820DA954000435DFC /* AppDelegate.swift in Sources */,
+				364576B420E3D72B005E800A /* Job.swift in Sources */,
 				97ED4EBA20E2C97C0031648C /* Thing.swift in Sources */,
 				97466DB720E11F310074F960 /* JobViewController.swift in Sources */,
 				97CB544F20E113D8006E57A9 /* Order.swift in Sources */,
