@@ -23,6 +23,7 @@
 		97F50FAD20DA954100435DFC /* projeto_foundationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F50FAC20DA954100435DFC /* projeto_foundationsTests.swift */; };
 		97F50FB820DA954100435DFC /* projeto_foundationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F50FB720DA954100435DFC /* projeto_foundationsUITests.swift */; };
 		97F50FC620DAA1AB00435DFC /* OrderTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F50FC520DAA1AB00435DFC /* OrderTableCell.swift */; };
+		97FE395C20E3D52D00DE94DF /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FE395B20E3D52D00DE94DF /* Cart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		97F50FB720DA954100435DFC /* projeto_foundationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projeto_foundationsUITests.swift; sourceTree = "<group>"; };
 		97F50FB920DA954100435DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97F50FC520DAA1AB00435DFC /* OrderTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableCell.swift; sourceTree = "<group>"; };
+		97FE395B20E3D52D00DE94DF /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				97CB544E20E113D8006E57A9 /* Order.swift */,
 				97ED4EB720E2C9720031648C /* Category.swift */,
 				97ED4EB920E2C97C0031648C /* Thing.swift */,
+				97FE395B20E3D52D00DE94DF /* Cart.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				97466DB720E11F310074F960 /* JobViewController.swift in Sources */,
 				97CB544F20E113D8006E57A9 /* Order.swift in Sources */,
 				97466DB920E128240074F960 /* NewOrderViewController.swift in Sources */,
+				97FE395C20E3D52D00DE94DF /* Cart.swift in Sources */,
 				97F50FC620DAA1AB00435DFC /* OrderTableCell.swift in Sources */,
 				97466DB320E11BCB0074F960 /* OrderViewController.swift in Sources */,
 				97ED4EB620E2C8C80031648C /* ThingCollectionViewCell.swift in Sources */,
