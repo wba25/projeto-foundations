@@ -18,10 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let navigationBarAppearace = UINavigationBar.appearance()
         
-//        navigationBarAppearace.tintColor = uicolorFromHex(rgbValue:0xffffff)
+        navigationBarAppearace.tintColor = uicolorFromHex(rgbValue:0xffffff)
         navigationBarAppearace.barTintColor = uicolorFromHex(rgbValue:0xda7933)
-//        navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.blue]
-        
+        navigationBarAppearace.isTranslucent = true
+//        navigationBarAppearace.titleTextAttributes = [kCTForegroundColorAttributeName:UIColor.white] as [NSAttributedStringKey : Any]
         return true
     }
 
