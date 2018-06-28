@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		364576B420E3D72B005E800A /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364576B320E3D72B005E800A /* Job.swift */; };
+		367E6A0920E535D200191D84 /* ShowOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367E6A0820E535D200191D84 /* ShowOrderViewController.swift */; };
 		36A2D2F820E3D380002FD00E /* JobTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A2D2F720E3D380002FD00E /* JobTableCell.swift */; };
 		97466DB320E11BCB0074F960 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97466DB220E11BCB0074F960 /* OrderViewController.swift */; };
 		97466DB520E11F1F0074F960 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97466DB420E11F1F0074F960 /* HomeViewController.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		364576B320E3D72B005E800A /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		367E6A0820E535D200191D84 /* ShowOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowOrderViewController.swift; sourceTree = "<group>"; };
 		36A2D2F720E3D380002FD00E /* JobTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableCell.swift; sourceTree = "<group>"; };
 		97466DB220E11BCB0074F960 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		97466DB420E11F1F0074F960 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				97466DB420E11F1F0074F960 /* HomeViewController.swift */,
 				97466DB620E11F310074F960 /* JobViewController.swift */,
 				97466DB820E128240074F960 /* NewOrderViewController.swift */,
+				367E6A0820E535D200191D84 /* ShowOrderViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				97466DB520E11F1F0074F960 /* HomeViewController.swift in Sources */,
 				97ED4EB820E2C9720031648C /* Category.swift in Sources */,
 				97F50F9820DA954000435DFC /* AppDelegate.swift in Sources */,
+				367E6A0920E535D200191D84 /* ShowOrderViewController.swift in Sources */,
 				364576B420E3D72B005E800A /* Job.swift in Sources */,
 				97ED4EBA20E2C97C0031648C /* Thing.swift in Sources */,
 				97466DB720E11F310074F960 /* JobViewController.swift in Sources */,

@@ -43,6 +43,31 @@ class OrderViewController: UIViewController, UITableViewDataSource, UITableViewD
         return 175
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let indexPath = tableView.indexPathForSelectedRow
+        
+        let currentCell = tableView.cellForRow(at: indexPath!) as! OrderTableCell
+        
+        performSegue(withIdentifier: "ShowOrderSegue", sender: currentCell)
+        /*
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "ShowOrderSegue") {
+            self.present(vc, animated: true, completion: nil)
+        }
+        */
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowOrderSegue" {
+            if let vc = segue.destination as? ShowOrderViewController {
+                if let sd = sender as? OrderTableCell {
+                    vc.orderToShow = sd
+                }
+            }
+            
+        }
+    }
+    
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        self.currOrder = orders[indexPath.row]
 //    }

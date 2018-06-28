@@ -80,23 +80,64 @@
                     <navigationItem key="navigationItem" title="Pedidos" id="VaX-Pq-IPY"/>
                     <connections>
                         <outlet property="pedidosTableView" destination="0t5-4G-v0f" id="44w-FP-BmV"/>
-                        <segue destination="ciT-HN-YBU" kind="show" id="Cch-Pe-ZLI"/>
+                        <segue destination="ciT-HN-YBU" kind="show" identifier="ShowOrderSegue" id="Cch-Pe-ZLI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="764" y="669.71514242878561"/>
         </scene>
-        <!--View Controller-->
+        <!--Show Order View Controller-->
         <scene sceneID="NHq-bq-a1l">
             <objects>
-                <viewController id="ciT-HN-YBU" sceneMemberID="viewController">
+                <viewController id="ciT-HN-YBU" customClass="ShowOrderViewController" customModule="projeto_foundations" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="75C-cS-sBH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46y-bo-9kJ">
+                                <rect key="frame" x="16" y="83" width="178" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J64-0L-BUU">
+                                <rect key="frame" x="16" y="171" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TvI-p9-hPh">
+                                <rect key="frame" x="16" y="262" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvx-6Z-PsP">
+                                <rect key="frame" x="16" y="341" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UUn-p5-NjM">
+                                <rect key="frame" x="0.0" y="400" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="d1d-Om-2eh"/>
                     </view>
+                    <connections>
+                        <outlet property="imageTumbnail" destination="UUn-p5-NjM" id="1kS-aV-vIc"/>
+                        <outlet property="labelData" destination="J64-0L-BUU" id="BTw-OZ-P3u"/>
+                        <outlet property="labelName" destination="46y-bo-9kJ" id="fiq-l6-jp1"/>
+                        <outlet property="labelPrice" destination="TvI-p9-hPh" id="cNf-hu-4G3"/>
+                        <outlet property="labelStatus" destination="jvx-6Z-PsP" id="5tM-h5-X3f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UsW-0Z-KuC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -178,7 +219,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="no0-E8-O95" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1040.8" y="-661.61919040479768"/>
+            <point key="canvasLocation" x="764" y="-1082"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="OGf-py-Xaz">
+            <objects>
+                <viewController id="rWd-2d-aLR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ehd-wY-l6O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eTu-1P-o5N"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MfC-BQ-Lqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1659" y="-1082"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="xGn-vw-juA">
