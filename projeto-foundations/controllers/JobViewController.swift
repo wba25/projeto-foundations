@@ -48,5 +48,26 @@ class JobViewController: UIViewController, UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 175
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let indexPath = tableView.indexPathForSelectedRow
+        
+        let currentCell = tableView.cellForRow(at: indexPath!) as! JobTableCell
+        
+        performSegue(withIdentifier: "ShowJobSegue", sender: currentCell)
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowJobSegue" {
+            if let vc = segue.destination as? ShowJobViewController {
+                if let sd = sender as? JobTableCell {
+                    vc.jobToShow = sd
+                }
+            }
+            
+        }
+    }
 
 }

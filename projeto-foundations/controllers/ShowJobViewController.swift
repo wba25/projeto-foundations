@@ -9,16 +9,24 @@
 import UIKit
 
 class ShowJobViewController: UIViewController {
+    
+    var jobToShow:JobTableCell? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loadJob()
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func loadJob(){
+        if let job = self.jobToShow {
+            //TO-DO
+        }
     }
     
 

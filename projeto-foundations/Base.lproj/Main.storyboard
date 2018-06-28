@@ -202,7 +202,7 @@
                                             <outlet property="name" destination="iUT-He-s1R" id="Ro5-sQ-8he"/>
                                             <outlet property="price" destination="5sj-Et-VUH" id="gpg-IE-DZH"/>
                                             <outlet property="thumbnail" destination="4xD-f8-IDV" id="cVg-N3-9Xl"/>
-                                            <segue destination="rWd-2d-aLR" kind="show" id="y66-Wx-l3P"/>
+                                            <segue destination="rWd-2d-aLR" kind="show" identifier="ShowJobSegue" id="y66-Wx-l3P"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -223,7 +223,6 @@
         <!--Show Job View Controller-->
         <scene sceneID="OGf-py-Xaz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MfC-BQ-Lqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="rWd-2d-aLR" customClass="ShowJobViewController" customModule="projeto_foundations" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ehd-wY-l6O">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
@@ -245,6 +244,7 @@
                         <viewLayoutGuide key="safeArea" id="eTu-1P-o5N"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MfC-BQ-Lqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2597.5999999999999" y="-1082.608695652174"/>
         </scene>
