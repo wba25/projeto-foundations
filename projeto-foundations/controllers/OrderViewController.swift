@@ -7,7 +7,7 @@ class OrderViewController: UIViewController, UITableViewDataSource, UITableViewD
     lazy var orders: [Order] = [
         Order(thumbnail:UIImage(named:"yoda")!, id:1, name:"Yoda", price:350.0, created_at:"12/06/2018", updated_at:"26/06/2018", status: "Imprimindo"),
         Order(thumbnail:UIImage(named:"groot")!, id:1, name:"Groot", price:300.0, created_at:"25/05/2018", updated_at:"12/06/2018", status: "Saiu para entrega"),
-        Order(thumbnail:UIImage(named:"plier")!, id:1, name:"Extrovenga", price:320.0, created_at:"24/04/2018", updated_at:"12/06/2018", status: "Entrege")
+        Order(thumbnail:UIImage(named:"plier")!, id:1, name:"Alicate Predador", price:320.0, created_at:"24/04/2018", updated_at:"12/06/2018", status: "Entrege")
     ]
     
 //    var currOrder: Order = nil
