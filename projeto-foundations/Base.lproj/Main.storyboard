@@ -203,7 +203,6 @@
                                             <outlet property="name" destination="iUT-He-s1R" id="Ro5-sQ-8he"/>
                                             <outlet property="price" destination="5sj-Et-VUH" id="gpg-IE-DZH"/>
                                             <outlet property="thumbnail" destination="4xD-f8-IDV" id="cVg-N3-9Xl"/>
-                                            <segue destination="rWd-2d-aLR" kind="show" identifier="ShowJobSegue" id="y66-Wx-l3P"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -215,6 +214,7 @@
                     <navigationItem key="navigationItem" id="5Iv-hp-uqP"/>
                     <connections>
                         <outlet property="jobTableView" destination="Xm7-V2-EgH" id="q82-dq-yg4"/>
+                        <segue destination="rWd-2d-aLR" kind="show" identifier="ShowJobSegue" id="h2M-Fi-YGA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="no0-E8-O95" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -244,6 +244,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="eTu-1P-o5N"/>
                     </view>
+                    <connections>
+                        <outlet property="jobImage" destination="tKI-ew-7Ij" id="44j-vj-Nyx"/>
+                        <outlet property="jobName" destination="fqe-LN-VIf" id="B8c-Kf-U4x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MfC-BQ-Lqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

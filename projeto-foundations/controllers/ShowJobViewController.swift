@@ -10,6 +10,9 @@ import UIKit
 
 class ShowJobViewController: UIViewController {
     
+    @IBOutlet weak var jobImage: UIImageView!
+    @IBOutlet weak var jobName: UILabel!
+    
     var jobToShow:JobTableCell? = nil
 
     override func viewDidLoad() {
@@ -25,7 +28,8 @@ class ShowJobViewController: UIViewController {
     
     func loadJob(){
         if let job = self.jobToShow {
-            //TO-DO
+            self.jobName.text = job.name.text
+            self.jobImage.image = job.thumbnail.image
         }
     }
     
