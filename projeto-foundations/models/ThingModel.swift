@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Thing {
+class ThingModel {
     
     var image: UIImage
     var name: String

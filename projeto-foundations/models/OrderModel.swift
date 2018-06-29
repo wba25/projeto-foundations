@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Order {
+class OrderModel {
     
     var thumbnail: UIImage
     var id: Int

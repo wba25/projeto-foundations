@@ -12,9 +12,9 @@ import UIKit
 class Category {
     
     var name: String
-    var things: [Thing]
+    var things: [ThingModel]
     
-    init (name: String, things: [Thing]) {
+    init (name: String, things: [ThingModel]) {
         self.name = name
         self.things = things
     }

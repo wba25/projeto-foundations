@@ -12,7 +12,7 @@ class CategoryTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollec
 
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var thingsCollectionView: UICollectionView!
-    var things: [Thing] = []
+    var things: [ThingModel] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()

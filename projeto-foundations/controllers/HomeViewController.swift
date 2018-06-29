@@ -12,19 +12,19 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     lazy var categories = [
         Category(name: "Recentes", things: [
-            Thing(image: UIImage(named:"yoda")!, name:"Yoda", description:"Yoda para prateleira"),
-            Thing(image: UIImage(named:"groot")!, name:"Groot", description:"Pequeno Groot decorativo"),
-            Thing(image: UIImage(named:"plier")!, name:"Plier", description:"Alicate predador complexo")
+            ThingModel(image: UIImage(named:"yoda")!, name:"Yoda", description:"Yoda para prateleira"),
+            ThingModel(image: UIImage(named:"groot")!, name:"Groot", description:"Pequeno Groot decorativo"),
+            ThingModel(image: UIImage(named:"plier")!, name:"Plier", description:"Alicate predador complexo")
         ]),
         Category(name: "Populares", things: [
-            Thing(image: UIImage(named:"objeto-3d-1")!, name:"Cacto", description:"Cacto para jardins"),
-            Thing(image: UIImage(named:"objeto-3d-2")!, name:"Homem de Ferro", description:"Capacete fantasia de carnaval"),
-            Thing(image: UIImage(named:"objeto-3d-3")!, name:"Robô", description:"Robô peso para papel")
+            ThingModel(image: UIImage(named:"objeto-3d-1")!, name:"Cacto", description:"Cacto para jardins"),
+            ThingModel(image: UIImage(named:"objeto-3d-2")!, name:"Homem de Ferro", description:"Capacete fantasia de carnaval"),
+            ThingModel(image: UIImage(named:"objeto-3d-3")!, name:"Robô", description:"Robô peso para papel")
             ]),
         Category(name: "Sugeridos", things: [
-            Thing(image: UIImage(named:"sugeridos-1")!, name:"Kinderovo 3D", description:"Kinderovo imprimível"),
-            Thing(image: UIImage(named:"sugeridos-2")!, name:"Ovos de Dragão", description:"Com dragões dentro!"),
-            Thing(image: UIImage(named:"sugeridos-3")!, name:"Controle Remoto", description:"Controle cyberpunk 1980x")
+            ThingModel(image: UIImage(named:"sugeridos-1")!, name:"Kinderovo 3D", description:"Kinderovo imprimível"),
+            ThingModel(image: UIImage(named:"sugeridos-2")!, name:"Ovos de Dragão", description:"Com dragões dentro!"),
+            ThingModel(image: UIImage(named:"sugeridos-3")!, name:"Controle Remoto", description:"Controle cyberpunk 1980x")
             ])
     ]
 

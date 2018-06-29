@@ -15,11 +15,11 @@
 		97466DB720E11F310074F960 /* JobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97466DB620E11F310074F960 /* JobViewController.swift */; };
 		97466DB920E128240074F960 /* NewOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97466DB820E128240074F960 /* NewOrderViewController.swift */; };
 		9785373C20E5C0F700F1C185 /* 3DTIZE.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9785373A20E5C0F700F1C185 /* 3DTIZE.xcdatamodeld */; };
-		97CB544F20E113D8006E57A9 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CB544E20E113D8006E57A9 /* Order.swift */; };
+		97CB544F20E113D8006E57A9 /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CB544E20E113D8006E57A9 /* OrderModel.swift */; };
 		97D105B720E2C81600A691AE /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D105B620E2C81600A691AE /* CategoryTableViewCell.swift */; };
 		97ED4EB620E2C8C80031648C /* ThingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ED4EB520E2C8C80031648C /* ThingCollectionViewCell.swift */; };
 		97ED4EB820E2C9720031648C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ED4EB720E2C9720031648C /* Category.swift */; };
-		97ED4EBA20E2C97C0031648C /* Thing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ED4EB920E2C97C0031648C /* Thing.swift */; };
+		97ED4EBA20E2C97C0031648C /* ThingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ED4EB920E2C97C0031648C /* ThingModel.swift */; };
 		97F50F9820DA954000435DFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F50F9720DA954000435DFC /* AppDelegate.swift */; };
 		97F50F9D20DA954000435DFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97F50F9B20DA954000435DFC /* Main.storyboard */; };
 		97F50F9F20DA954100435DFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97F50F9E20DA954100435DFC /* Assets.xcassets */; };
@@ -57,11 +57,11 @@
 		97466DB620E11F310074F960 /* JobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewController.swift; sourceTree = "<group>"; };
 		97466DB820E128240074F960 /* NewOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderViewController.swift; sourceTree = "<group>"; };
 		9785373B20E5C0F700F1C185 /* 3DTIZE.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 3DTIZE.xcdatamodel; sourceTree = "<group>"; };
-		97CB544E20E113D8006E57A9 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		97CB544E20E113D8006E57A9 /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		97D105B620E2C81600A691AE /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		97ED4EB520E2C8C80031648C /* ThingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingCollectionViewCell.swift; sourceTree = "<group>"; };
 		97ED4EB720E2C9720031648C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		97ED4EB920E2C97C0031648C /* Thing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thing.swift; sourceTree = "<group>"; };
+		97ED4EB920E2C97C0031648C /* ThingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingModel.swift; sourceTree = "<group>"; };
 		97F50F9420DA954000435DFC /* projeto-foundations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "projeto-foundations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97F50F9720DA954000435DFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97F50F9C20DA954000435DFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,9 +120,9 @@
 		97CB544D20E113AE006E57A9 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				97CB544E20E113D8006E57A9 /* Order.swift */,
+				97CB544E20E113D8006E57A9 /* OrderModel.swift */,
 				97ED4EB720E2C9720031648C /* Category.swift */,
-				97ED4EB920E2C97C0031648C /* Thing.swift */,
+				97ED4EB920E2C97C0031648C /* ThingModel.swift */,
 				364576B320E3D72B005E800A /* Job.swift */,
 				97FE395B20E3D52D00DE94DF /* Cart.swift */,
 			);
@@ -325,9 +325,9 @@
 				97F50F9820DA954000435DFC /* AppDelegate.swift in Sources */,
 				367E6A0920E535D200191D84 /* ShowOrderViewController.swift in Sources */,
 				364576B420E3D72B005E800A /* Job.swift in Sources */,
-				97ED4EBA20E2C97C0031648C /* Thing.swift in Sources */,
+				97ED4EBA20E2C97C0031648C /* ThingModel.swift in Sources */,
 				97466DB720E11F310074F960 /* JobViewController.swift in Sources */,
-				97CB544F20E113D8006E57A9 /* Order.swift in Sources */,
+				97CB544F20E113D8006E57A9 /* OrderModel.swift in Sources */,
 				97466DB920E128240074F960 /* NewOrderViewController.swift in Sources */,
 				97FE395C20E3D52D00DE94DF /* Cart.swift in Sources */,
 				97F50FC620DAA1AB00435DFC /* OrderTableCell.swift in Sources */,
