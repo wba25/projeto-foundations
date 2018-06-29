@@ -14,6 +14,7 @@
 		97466DB520E11F1F0074F960 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97466DB420E11F1F0074F960 /* HomeViewController.swift */; };
 		97466DB720E11F310074F960 /* JobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97466DB620E11F310074F960 /* JobViewController.swift */; };
 		97466DB920E128240074F960 /* NewOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97466DB820E128240074F960 /* NewOrderViewController.swift */; };
+		9785373C20E5C0F700F1C185 /* 3DTIZE.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9785373A20E5C0F700F1C185 /* 3DTIZE.xcdatamodeld */; };
 		97CB544F20E113D8006E57A9 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CB544E20E113D8006E57A9 /* Order.swift */; };
 		97D105B720E2C81600A691AE /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D105B620E2C81600A691AE /* CategoryTableViewCell.swift */; };
 		97ED4EB620E2C8C80031648C /* ThingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ED4EB520E2C8C80031648C /* ThingCollectionViewCell.swift */; };
@@ -55,6 +56,7 @@
 		97466DB420E11F1F0074F960 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		97466DB620E11F310074F960 /* JobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewController.swift; sourceTree = "<group>"; };
 		97466DB820E128240074F960 /* NewOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderViewController.swift; sourceTree = "<group>"; };
+		9785373B20E5C0F700F1C185 /* 3DTIZE.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 3DTIZE.xcdatamodel; sourceTree = "<group>"; };
 		97CB544E20E113D8006E57A9 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		97D105B620E2C81600A691AE /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		97ED4EB520E2C8C80031648C /* ThingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				97D105B620E2C81600A691AE /* CategoryTableViewCell.swift */,
 				97ED4EB520E2C8C80031648C /* ThingCollectionViewCell.swift */,
 				36A2D2F720E3D380002FD00E /* JobTableCell.swift */,
+				9785373A20E5C0F700F1C185 /* 3DTIZE.xcdatamodeld */,
 			);
 			path = "projeto-foundations";
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 			files = (
 				36A2D2F820E3D380002FD00E /* JobTableCell.swift in Sources */,
 				F4D08F1D20E555AC00FF1A83 /* ShowJobViewController.swift in Sources */,
+				9785373C20E5C0F700F1C185 /* 3DTIZE.xcdatamodeld in Sources */,
 				97466DB520E11F1F0074F960 /* HomeViewController.swift in Sources */,
 				97ED4EB820E2C9720031648C /* Category.swift in Sources */,
 				97F50F9820DA954000435DFC /* AppDelegate.swift in Sources */,
@@ -664,6 +668,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9785373A20E5C0F700F1C185 /* 3DTIZE.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9785373B20E5C0F700F1C185 /* 3DTIZE.xcdatamodel */,
+			);
+			currentVersion = 9785373B20E5C0F700F1C185 /* 3DTIZE.xcdatamodel */;
+			path = 3DTIZE.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 97F50F8C20DA954000435DFC /* Project object */;
 }
