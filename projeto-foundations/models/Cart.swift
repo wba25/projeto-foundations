@@ -11,7 +11,8 @@ import UIKit
 
 class Cart {
     
-    var name: String
+    var title: String
+    var image: UIImage
     var url: String
     var preenchimento: String
     var espessura: String
@@ -28,12 +29,12 @@ class Cart {
     
     private static var sharedCart: Cart = {
         let cart = Cart()
-        
         return cart
     }()
     
     private init() {
-        self.name = ""
+        self.title = ""
+        self.image = UIImage()
         self.url = ""
         self.preenchimento = ""
         self.espessura = ""
@@ -49,8 +50,9 @@ class Cart {
     }
     
     func clearCart () {
-        self.name = ""
+        self.title = ""
         self.url = ""
+        self.image = UIImage()
         self.preenchimento = ""
         self.espessura = ""
         self.material = ""
@@ -68,16 +70,24 @@ class Cart {
         return sharedCart
     }
     
-    func getName () -> String{
-        return self.name
+    func getTitle () -> String{
+        return self.title
     }
     
-    func setName (name: String) -> Void {
-        self.name = name
+    func setTitle (title: String) -> Void {
+        self.title = title
+    }
+    
+    func getImage () -> UIImage {
+        return self.image
+    }
+    
+    func setImage (image: UIImage) -> Void {
+        self.image = image
     }
     
     func getUrl () -> String{
-        return self.name
+        return self.url
     }
     
     func setUrl (url: String) -> Void {
@@ -88,7 +98,7 @@ class Cart {
         return self.preenchimento
     }
     
-    func setUrl (preenchimento: String) -> Void {
+    func setPreenchimento (preenchimento: String) -> Void {
         self.preenchimento = preenchimento
     }
     
@@ -157,7 +167,7 @@ class Cart {
     }
     
     func getCvv () -> String{
-        return self.name
+        return self.cvv
     }
     
     func setCvv (cvv: String) -> Void {

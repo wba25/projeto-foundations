@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class OrderModel {
     
@@ -19,6 +20,8 @@ class OrderModel {
     var updated_at: String
     var status: String
     
+    var orders: [Order] = []
+    
     init (thumbnail: UIImage, id: Int, name: String, price: Float, created_at: String, updated_at: String, status: String) {
         self.thumbnail = thumbnail
         self.id = id
@@ -27,5 +30,17 @@ class OrderModel {
         self.created_at = created_at
         self.updated_at = updated_at
         self.status = status
+    }
+    
+    func loadOrders (with context: NSManagedObjectContext) {
+        let fetchRequest: NSFetchRequest<Order> = Order.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "updated_at", ascending: false)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        do {
+            orders = try context.fetch(fetchRequest)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }
