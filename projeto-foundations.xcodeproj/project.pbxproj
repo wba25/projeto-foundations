@@ -15,7 +15,6 @@
 		97466DB720E11F310074F960 /* JobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97466DB620E11F310074F960 /* JobViewController.swift */; };
 		97466DB920E128240074F960 /* NewOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97466DB820E128240074F960 /* NewOrderViewController.swift */; };
 		977BFED320EAFF560000DB6D /* NewOrderResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BFED220EAFF560000DB6D /* NewOrderResumeViewController.swift */; };
-		977BFED520EBF88A0000DB6D /* SceneKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BFED420EBF88A0000DB6D /* SceneKitViewController.swift */; };
 		9785373C20E5C0F700F1C185 /* 3DTIZE.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9785373A20E5C0F700F1C185 /* 3DTIZE.xcdatamodeld */; };
 		97CB544F20E113D8006E57A9 /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CB544E20E113D8006E57A9 /* OrderModel.swift */; };
 		97D105B720E2C81600A691AE /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D105B620E2C81600A691AE /* CategoryTableViewCell.swift */; };
@@ -59,7 +58,6 @@
 		97466DB620E11F310074F960 /* JobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewController.swift; sourceTree = "<group>"; };
 		97466DB820E128240074F960 /* NewOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderViewController.swift; sourceTree = "<group>"; };
 		977BFED220EAFF560000DB6D /* NewOrderResumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderResumeViewController.swift; sourceTree = "<group>"; };
-		977BFED420EBF88A0000DB6D /* SceneKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneKitViewController.swift; sourceTree = "<group>"; };
 		9785373B20E5C0F700F1C185 /* 3DTIZE.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 3DTIZE.xcdatamodel; sourceTree = "<group>"; };
 		97CB544E20E113D8006E57A9 /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		97D105B620E2C81600A691AE /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 				97466DB820E128240074F960 /* NewOrderViewController.swift */,
 				367E6A0820E535D200191D84 /* ShowOrderViewController.swift */,
 				977BFED220EAFF560000DB6D /* NewOrderResumeViewController.swift */,
-				977BFED420EBF88A0000DB6D /* SceneKitViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -340,7 +337,6 @@
 				97F50FC620DAA1AB00435DFC /* OrderTableCell.swift in Sources */,
 				97466DB320E11BCB0074F960 /* OrderViewController.swift in Sources */,
 				97ED4EB620E2C8C80031648C /* ThingCollectionViewCell.swift in Sources */,
-				977BFED520EBF88A0000DB6D /* SceneKitViewController.swift in Sources */,
 				97D105B720E2C81600A691AE /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
