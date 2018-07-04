@@ -21,7 +21,25 @@ class NewOrderResumeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func finalizeOrder(_ sender: UIButton) {
+        let cart = Cart.shared()
+        
+        if (cart.isSavable()) {
+            let thing = Thing(context: context)
+            thing.image = cart.image
+            thing.title = cart.title
 
+            do {
+                try context.save()
+            } catch {
+                print(error.localizedDescription)
+            }
+            
+//            navigationController?.popViewController(animated: true)
+            //nao funcionou
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

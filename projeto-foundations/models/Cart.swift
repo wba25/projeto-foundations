@@ -70,6 +70,10 @@ class Cart {
         return sharedCart
     }
     
+    func isSavable() -> Bool {
+        return true
+    }
+    
     func getTitle () -> String{
         return self.title
     }

@@ -17,6 +17,7 @@
 		977BFED320EAFF560000DB6D /* NewOrderResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BFED220EAFF560000DB6D /* NewOrderResumeViewController.swift */; };
 		9785373C20E5C0F700F1C185 /* 3DTIZE.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9785373A20E5C0F700F1C185 /* 3DTIZE.xcdatamodeld */; };
 		97CB544F20E113D8006E57A9 /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CB544E20E113D8006E57A9 /* OrderModel.swift */; };
+		97CC13E320ED73B400C8D4C2 /* ViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC13E220ED73B400C8D4C2 /* ViewController+CoreData.swift */; };
 		97D105B720E2C81600A691AE /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D105B620E2C81600A691AE /* CategoryTableViewCell.swift */; };
 		97ED4EB620E2C8C80031648C /* ThingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ED4EB520E2C8C80031648C /* ThingCollectionViewCell.swift */; };
 		97ED4EB820E2C9720031648C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ED4EB720E2C9720031648C /* Category.swift */; };
@@ -61,6 +62,7 @@
 		977BFED220EAFF560000DB6D /* NewOrderResumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderResumeViewController.swift; sourceTree = "<group>"; };
 		9785373B20E5C0F700F1C185 /* 3DTIZE.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 3DTIZE.xcdatamodel; sourceTree = "<group>"; };
 		97CB544E20E113D8006E57A9 /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
+		97CC13E220ED73B400C8D4C2 /* ViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CoreData.swift"; sourceTree = "<group>"; };
 		97D105B620E2C81600A691AE /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		97ED4EB520E2C8C80031648C /* ThingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingCollectionViewCell.swift; sourceTree = "<group>"; };
 		97ED4EB720E2C9720031648C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				97ED4EB520E2C8C80031648C /* ThingCollectionViewCell.swift */,
 				36A2D2F720E3D380002FD00E /* JobTableCell.swift */,
 				9785373A20E5C0F700F1C185 /* 3DTIZE.xcdatamodeld */,
+				97CC13E220ED73B400C8D4C2 /* ViewController+CoreData.swift */,
 			);
 			path = "projeto-foundations";
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				97F50F9820DA954000435DFC /* AppDelegate.swift in Sources */,
 				367E6A0920E535D200191D84 /* ShowOrderViewController.swift in Sources */,
 				364576B420E3D72B005E800A /* Job.swift in Sources */,
+				97CC13E320ED73B400C8D4C2 /* ViewController+CoreData.swift in Sources */,
 				97ED4EBA20E2C97C0031648C /* ThingModel.swift in Sources */,
 				97466DB720E11F310074F960 /* JobViewController.swift in Sources */,
 				97CB544F20E113D8006E57A9 /* OrderModel.swift in Sources */,
