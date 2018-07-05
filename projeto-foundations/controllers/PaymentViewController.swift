@@ -7,62 +7,82 @@
 //
 
 import UIKit
-
-struct Pagamento {
-    var cardNumber: String
-    var date: String
-    var cardFlag: UIImage
-    
-    init(cardNumber: String, date: String, cardFlag: UIImage) {
-        self.cardNumber = cardNumber
-        self.date = date
-        self.cardFlag = cardFlag
-    }
-}
+import CoreData
 
 class PaymentViewController: UIViewController {
     
     @IBOutlet weak var paymentsTableView: UITableView!
-    var formasDePagamento: [Pagamento] = [Pagamento(cardNumber: "1234 5678 9101", date: "12/22", cardFlag: #imageLiteral(resourceName: "MasterCardFlag")),Pagamento(cardNumber: "567 8910 1112", date: "10/24", cardFlag: #imageLiteral(resourceName: "VisaFlag"))]
+    var fetchedResultController: NSFetchedResultsController<Payment>!
+    var label = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        label.text = "Você ainda não cadastrou nenhum método de pagamento."
+        label.textAlignment = .center
+        
+        loadPayments(with: context)
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-   
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func loadPayments (with context: NSManagedObjectContext) {
+        let fetchRequest: NSFetchRequest<Payment> = Payment.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "created_at", ascending: false)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        fetchedResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultController.delegate = self
+        
+        do {
+            try fetchedResultController.performFetch()
+        } catch {
+            print(error.localizedDescription)
+        }
     }
-    */
-
+    
 }
 
 extension PaymentViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return formasDePagamento.count
+        //        return formasDePagamento.count
+        
+        let count = fetchedResultController.fetchedObjects?.count ?? 0
+        paymentsTableView.backgroundView = count == 0 ? label : nil
+        
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("entrou")
         let cell = tableView.dequeueReusableCell(withIdentifier: "PaymentTableViewCell", for: indexPath) as! PaymentTableViewCell
         print("Passou")
-        cell.prepare(with: formasDePagamento[indexPath.row])
+        
+        guard let payment = fetchedResultController.fetchedObjects?[indexPath.row] else {
+            return cell
+        }
+        
+        cell.prepare(with: payment)
         return cell
     }
     
-    
 }
 
+extension PaymentViewController: NSFetchedResultsControllerDelegate {
+    func controller(_ controler: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        
+        switch type {
+        case .delete:
+            break
+        default:
+            paymentsTableView.reloadData()
+        }
+    }
+}

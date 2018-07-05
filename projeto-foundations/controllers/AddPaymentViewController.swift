@@ -32,6 +32,21 @@ class AddPaymentViewController: UIViewController {
 
     @IBAction func addCardButton(_ sender: UIButton) {
         
+        
+        let payment = Payment(context: context)
+        payment.cardHolderName = cardHolderNameTextField.text!
+        payment.cardNumber = cardNumberTextField.text!
+        payment.expirationDate = expirationDateTextField.text!
+        payment.cvv = cvvTextField.text!
+        
+        do {
+            try context.save()
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        navigationController?.popViewController(animated: true)
+        //nao funcionou
     }
     /*
     // MARK: - Navigation

@@ -25,9 +25,13 @@ class PaymentTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func prepare(with formaDePagamento: Pagamento){
-        cardFlagImage.image = formaDePagamento.cardFlag
-        numberCardLabel.text = formaDePagamento.cardNumber
+    func prepare(with payment: Payment) {
+        numberCardLabel.text = payment.cardNumber
+        if payment.cardNumber!.hasPrefix("4") {
+            cardFlagImage.image = UIImage(named: "VisaFlag")
+        } else {
+            cardFlagImage.image = UIImage(named: "MasterCardFlag")
+        }
     }
 
 }
