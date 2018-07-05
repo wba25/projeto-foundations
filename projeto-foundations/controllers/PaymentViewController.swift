@@ -12,6 +12,7 @@ struct Pagamento {
     var cardNumber: String
     var date: String
     var cardFlag: UIImage
+    
     init(cardNumber: String, date: String, cardFlag: UIImage) {
         self.cardNumber = cardNumber
         self.date = date
@@ -49,17 +50,18 @@ class PaymentViewController: UIViewController {
 
 extension PaymentViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return formasDePagamento.count + 1
+        return (formasDePagamento.count + 1)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if (indexPath.row != formasDePagamento.count){
+            print("entrou")
             let cell = tableView.dequeueReusableCell(withIdentifier: "PaymentTableViewCell", for: indexPath) as! PaymentTableViewCell
+            print("Passou")
             cell.prepare(with: formasDePagamento[indexPath.row])
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AddPaymentTableViewCell", for: indexPath) as! AddPaymentTableViewCell
-            cell.prepare(with: formasDePagamento[indexPath.row])
             return cell
         }
         
