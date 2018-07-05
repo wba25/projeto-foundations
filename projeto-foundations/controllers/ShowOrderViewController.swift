@@ -35,6 +35,7 @@ class ShowOrderViewController: UIViewController {
             self.labelData.text = ord.date.text
             self.labelStatus.text = ord.status.text
             self.imageTumbnail.image = ord.thumbnail.image
+            self.labelPrice.text = String(ord.price)
             // TODO: consultar preço da base de dados - self.labelPrice.text = 
         }
     }

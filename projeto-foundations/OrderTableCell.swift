@@ -15,9 +15,12 @@ class OrderTableCell: UITableViewCell {
     @IBOutlet weak var status: UILabel!
     @IBOutlet weak var date: UILabel!
     
+    var price: Float = 0.0
+    
     func prepare(with thing: Thing) {
         name.text = thing.title
         status.text = thing.status
+        price = thing.price
         
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM/yyyy"
