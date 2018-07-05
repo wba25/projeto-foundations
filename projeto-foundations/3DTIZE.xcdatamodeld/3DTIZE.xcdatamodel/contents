@@ -8,8 +8,11 @@
         <relationship name="thing" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Thing" inverseName="address" inverseEntity="Thing" syncable="YES"/>
     </entity>
     <entity name="Payment" representedClassName="Payment" syncable="YES" codeGenerationType="class">
-        <attribute name="creditCard" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardHolderName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="cvv" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="expirationDate" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="thing" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Thing" inverseName="payment" inverseEntity="Thing" syncable="YES"/>
     </entity>
     <entity name="Thing" representedClassName="Thing" syncable="YES" codeGenerationType="class">
@@ -29,7 +32,7 @@
     </entity>
     <elements>
         <element name="Thing" positionX="-162" positionY="-496" width="128" height="238"/>
-        <element name="Payment" positionX="63" positionY="-346" width="128" height="88"/>
+        <element name="Payment" positionX="63" positionY="-346" width="128" height="133"/>
         <element name="Address" positionX="-414" positionY="-324" width="128" height="118"/>
     </elements>
 </model>
