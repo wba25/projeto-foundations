@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18163E7020EE4F3400148A31 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18163E6F20EE4F3400148A31 /* PaymentViewController.swift */; };
 		364576B420E3D72B005E800A /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364576B320E3D72B005E800A /* JobModel.swift */; };
 		367E6A0920E535D200191D84 /* ShowOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367E6A0820E535D200191D84 /* ShowOrderViewController.swift */; };
 		36A2D2F820E3D380002FD00E /* JobTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A2D2F720E3D380002FD00E /* JobTableCell.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18163E6F20EE4F3400148A31 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		364576B320E3D72B005E800A /* JobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
 		367E6A0820E535D200191D84 /* ShowOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowOrderViewController.swift; sourceTree = "<group>"; };
 		36A2D2F720E3D380002FD00E /* JobTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableCell.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				367E6A0820E535D200191D84 /* ShowOrderViewController.swift */,
 				977BFED220EAFF560000DB6D /* NewOrderResumeViewController.swift */,
 				F4F21D5E20ED13EF006FA7ED /* SettingsViewController.swift */,
+				18163E6F20EE4F3400148A31 /* PaymentViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				97466DB320E11BCB0074F960 /* OrderViewController.swift in Sources */,
 				97ED4EB620E2C8C80031648C /* ThingCollectionViewCell.swift in Sources */,
 				97D105B720E2C81600A691AE /* CategoryTableViewCell.swift in Sources */,
+				18163E7020EE4F3400148A31 /* PaymentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
