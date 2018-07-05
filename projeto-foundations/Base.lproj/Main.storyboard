@@ -689,6 +689,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="paymentsTableView" destination="rvi-ew-SYB" id="b2e-0u-IT1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UyH-Y2-25M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -760,7 +763,49 @@
                     <view key="view" contentMode="scaleToFill" id="Al5-45-3fB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l7W-r5-0EZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Endereços" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ydw-Cg-NRw">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="nJB-mv-a2b">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nJB-mv-a2b" id="FaA-pe-ZAl">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rua azeredo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6k-aR-bh7">
+                                                    <rect key="frame" x="23" y="12" width="329" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="w6k-aR-bh7" firstAttribute="centerY" secondItem="FaA-pe-ZAl" secondAttribute="centerY" id="4DC-l3-AV3"/>
+                                                <constraint firstItem="w6k-aR-bh7" firstAttribute="leading" secondItem="FaA-pe-ZAl" secondAttribute="leadingMargin" constant="8" id="9bc-hN-9xh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="w6k-aR-bh7" secondAttribute="trailing" constant="8" id="eiW-Zr-wzM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="l7W-r5-0EZ" firstAttribute="bottom" secondItem="6GN-th-98H" secondAttribute="bottom" id="9YH-rM-ZTf"/>
+                            <constraint firstItem="l7W-r5-0EZ" firstAttribute="top" secondItem="Al5-45-3fB" secondAttribute="top" id="EDF-6j-11k"/>
+                            <constraint firstItem="l7W-r5-0EZ" firstAttribute="trailing" secondItem="6GN-th-98H" secondAttribute="trailing" id="EHs-0j-FzX"/>
+                            <constraint firstItem="l7W-r5-0EZ" firstAttribute="leading" secondItem="6GN-th-98H" secondAttribute="leading" id="Jqd-sk-Adq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6GN-th-98H"/>
                     </view>
                     <navigationItem key="navigationItem" title="Endereço" id="5OW-dX-KhX">
@@ -773,7 +818,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dh5-Jg-4cq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-833" y="1514"/>
+            <point key="canvasLocation" x="-834.39999999999998" y="1513.4932533733136"/>
         </scene>
         <!--Resumo-->
         <scene sceneID="DS0-zG-8Ai">

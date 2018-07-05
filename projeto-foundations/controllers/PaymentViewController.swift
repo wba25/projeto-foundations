@@ -22,6 +22,7 @@ struct Pagamento {
 
 class PaymentViewController: UIViewController {
     
+    @IBOutlet weak var paymentsTableView: UITableView!
     var formasDePagamento: [Pagamento] = [Pagamento(cardNumber: "1234 5678 9101", date: "12/22", cardFlag: #imageLiteral(resourceName: "MasterCardFlag")),Pagamento(cardNumber: "567 8910 1112", date: "10/24", cardFlag: #imageLiteral(resourceName: "VisaFlag"))]
     
     override func viewDidLoad() {
