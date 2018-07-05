@@ -334,7 +334,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hhs-ZX-XAq">
-                                                    <rect key="frame" x="16" y="41" width="359" height="220"/>
+                                                    <rect key="frame" x="10" y="41" width="365" height="220"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="220" id="kfN-co-TBY"/>
@@ -402,7 +402,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="hhs-ZX-XAq" secondAttribute="trailing" id="CRv-Ip-xPS"/>
-                                                <constraint firstItem="hhs-ZX-XAq" firstAttribute="leading" secondItem="vYh-ao-fj6" secondAttribute="leading" id="EBT-xj-UNo"/>
+                                                <constraint firstItem="hhs-ZX-XAq" firstAttribute="leading" secondItem="vYh-ao-fj6" secondAttribute="leading" constant="-6" id="EBT-xj-UNo"/>
                                                 <constraint firstItem="vYh-ao-fj6" firstAttribute="top" secondItem="Bxt-aO-WZ6" secondAttribute="top" id="NaC-uh-cbA"/>
                                                 <constraint firstAttribute="trailing" secondItem="vYh-ao-fj6" secondAttribute="trailing" constant="8" id="VCY-GG-cct"/>
                                                 <constraint firstItem="hhs-ZX-XAq" firstAttribute="top" secondItem="vYh-ao-fj6" secondAttribute="bottom" constant="8" id="dXC-ze-wVr"/>

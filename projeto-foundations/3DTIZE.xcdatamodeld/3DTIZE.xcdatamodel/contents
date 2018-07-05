@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Address" representedClassName="Address" syncable="YES" codeGenerationType="class">
+        <attribute name="cep" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="complemento" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numero" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rua" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="thing" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Thing" inverseName="address" inverseEntity="Thing" syncable="YES"/>
     </entity>
     <entity name="Payment" representedClassName="Payment" syncable="YES" codeGenerationType="class">
+        <attribute name="creditCard" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cvv" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="thing" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Thing" inverseName="payment" inverseEntity="Thing" syncable="YES"/>
     </entity>
     <entity name="Thing" representedClassName="Thing" syncable="YES" codeGenerationType="class">
@@ -23,7 +29,7 @@
     </entity>
     <elements>
         <element name="Thing" positionX="-162" positionY="-496" width="128" height="238"/>
-        <element name="Payment" positionX="63" positionY="-346" width="128" height="58"/>
-        <element name="Address" positionX="-414" positionY="-324" width="128" height="58"/>
+        <element name="Payment" positionX="63" positionY="-346" width="128" height="88"/>
+        <element name="Address" positionX="-414" positionY="-324" width="128" height="118"/>
     </elements>
 </model>
