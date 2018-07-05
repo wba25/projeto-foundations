@@ -32,6 +32,8 @@ class NewOrderResumeViewController: UIViewController {
             thing.thickness = cart.thickness
             thing.material = cart.material
             thing.color = cart.color
+            thing.payment = cart.payment
+            thing.address = cart.address
             
             do {
                 try context.save()
