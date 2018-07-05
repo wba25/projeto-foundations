@@ -10,9 +10,29 @@ import UIKit
 
 class NewOrderResumeViewController: UIViewController {
 
+    
+    @IBOutlet weak var imageModelImageView: UIImageView!
+    @IBOutlet weak var modelTitleLabel: UILabel!
+    @IBOutlet weak var fillLabel: UILabel!
+    @IBOutlet weak var materialLabel: UILabel!
+    @IBOutlet weak var thicknessLabel: UILabel!
+    @IBOutlet weak var cardNumberLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var cardFlagImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let cart = CartModel.shared()
+        imageModelImageView.image = cart.image
+        modelTitleLabel.text = cart.title
+        fillLabel.text = "\(cart.fill)"
+        materialLabel.text = cart.material + ", " + cart.color
+        thicknessLabel.text = "\(cart.thickness)" + " mm"
+        cardNumberLabel.text = cart.payment.cardNumber
+        cardFlagImageView.image = cart.payment.cardNumber!.hasPrefix("4") ? UIImage(named: "VisaFlag") : UIImage(named: "MasterCardFlag")
+        addressLabel.text = cart.address.rua! + " " + cart.address.numero!  + ", CEP " + cart.address.cep!
+    
+        
         // Do any additional setup after loading the view.
     }
 
