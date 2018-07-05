@@ -14,10 +14,11 @@ class CartModel {
     var title: String
     var image: UIImage
     var url: String
-    var preenchimento: String
-    var espessura: String
+    var fill: Float
+    var thickness: Float
     var material: String
-    var quantidade: String
+    var color: String
+    var quantity: Int
     var rua: String
     var numero: String
     var complemento: String
@@ -36,10 +37,11 @@ class CartModel {
         self.title = ""
         self.image = UIImage()
         self.url = ""
-        self.preenchimento = ""
-        self.espessura = ""
+        self.fill = -1.0
+        self.thickness = -1.0
         self.material = ""
-        self.quantidade = ""
+        self.color = ""
+        self.quantity = -1
         self.rua = ""
         self.numero = ""
         self.complemento = ""
@@ -53,10 +55,10 @@ class CartModel {
         self.title = ""
         self.url = ""
         self.image = UIImage()
-        self.preenchimento = ""
-        self.espessura = ""
+        self.fill = -1.0
+        self.thickness = -1.0
         self.material = ""
-        self.quantidade = ""
+        self.quantity = -1
         self.rua = ""
         self.numero = ""
         self.complemento = ""
@@ -72,117 +74,5 @@ class CartModel {
     
     func isSavable() -> Bool {
         return true
-    }
-    
-    func getTitle () -> String{
-        return self.title
-    }
-    
-    func setTitle (title: String) -> Void {
-        self.title = title
-    }
-    
-    func getImage () -> UIImage {
-        return self.image
-    }
-    
-    func setImage (image: UIImage) -> Void {
-        self.image = image
-    }
-    
-    func getUrl () -> String{
-        return self.url
-    }
-    
-    func setUrl (url: String) -> Void {
-        self.url = url
-    }
-    
-    func getPreenchimento () -> String{
-        return self.preenchimento
-    }
-    
-    func setPreenchimento (preenchimento: String) -> Void {
-        self.preenchimento = preenchimento
-    }
-    
-    func getEspessura () -> String{
-        return self.espessura
-    }
-    
-    func setEspessura (espessura: String) -> Void {
-        self.espessura = espessura
-    }
-    
-    func getMaterial () -> String{
-        return self.material
-    }
-    
-    func setMaterial (material: String) -> Void {
-        self.material = material
-    }
-    
-    func getQuantidade () -> String{
-        return self.quantidade
-    }
-    
-    func setQuantidade (quantidade: String) -> Void {
-        self.quantidade = quantidade
-    }
-    
-    func getRua () -> String{
-        return self.rua
-    }
-    
-    func setRua (rua: String) -> Void {
-        self.rua = rua
-    }
-    
-    func getNumero () -> String{
-        return self.numero
-    }
-    
-    func setNumero (numero: String) -> Void {
-        self.numero = numero
-    }
-    
-    func getComplemento () -> String{
-        return self.complemento
-    }
-    
-    func setComplemento (complemento: String) -> Void {
-        self.complemento = complemento
-    }
-    
-    func getCep () -> String{
-        return self.cep
-    }
-    
-    func setCep (cep: String) -> Void {
-        self.cep = cep
-    }
-    
-    func getCreditCard () -> String{
-        return self.creditCard
-    }
-    
-    func setCreditCard (creditCard: String) -> Void {
-        self.creditCard = creditCard
-    }
-    
-    func getCvv () -> String{
-        return self.cvv
-    }
-    
-    func setCvv (cvv: String) -> Void {
-        self.cvv = cvv
-    }
-    
-    func getPrice () -> String{
-        return self.price
-    }
-    
-    func setPrice (price: String) -> Void {
-        self.price = price
     }
 }

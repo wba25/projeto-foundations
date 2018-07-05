@@ -9,13 +9,14 @@
 import UIKit
 
 var fills = ["100% (Objeto sólido)", "50%", "33%", "25%", "20%", "17%", "12,5%", "10%", "5%", "2,5%", "0% (Objeto ôco)"]
+var fillsFloat: [Float] = [1.0, 0.5, 0.33, 0.25, 0.2, 0.17, 0.125, 0.1, 0.05, 0.025, 0.0]
 var thicknesses = ["0,1 mm", "0,2 mm", "> 0,2 mm"]
+var thicknessesFloat: [Float] = [0.1, 0.2, 0.3]
 var materials = [
-    "PLA, Opaco, Branco", "PLA, Opaco, Cinza", "PLA, Opaco, Preto", "PLA, Opaco, Vermelho", "PLA, Opaco, Laranja", "PLA, Opaco, Amarelo", "PLA, Opaco, Verde", "PLA, Opaco, Azul", "PLA, Opaco, Roxo",
-    "PLA, Translucido, Transparente",
-    "ABS, Opaco, Branco", "ABS, Opaco, Cinza", "ABS, Opaco, Preto", "ABS, Opaco, Vermelho", "ABS, Opaco, Laranja", "ABS, Opaco, Amarelo", "ABS, Opaco, Verde", "ABS, Opaco, Azul", "ABS, Opaco, Roxo"
+    ["PLA", "ABS"],
+    ["Branco", "Cinza", "Preto", "Vermelho", "Laranja", "Amarelo", "Verde", "Azul", "Roxo"]
 ]
-var quantities = Array(1...100)
+var quantities: [Int] = Array(1...100)
 
 class NewOrderViewController: UIViewController {
     
@@ -105,7 +106,7 @@ class NewOrderViewController: UIViewController {
         } else if (self.currPickerView == "thickness") {
             thicknessTextField.text = thicknesses[thicknessPickerView.selectedRow(inComponent: 0)]
         } else if (self.currPickerView == "material") {
-            materialTextField.text = materials[materialPickerView.selectedRow(inComponent: 0)]
+            materialTextField.text = materials[0][materialPickerView.selectedRow(inComponent: 0)] + ", " + materials[1][materialPickerView.selectedRow(inComponent: 1)]
         } else if (self.currPickerView == "quantity") {
             quantityTextField.text = String(quantities[quantityPickerView.selectedRow(inComponent: 0)])
         }
@@ -121,13 +122,14 @@ class NewOrderViewController: UIViewController {
         
         if (segue.identifier == "newOrderSettingsSegue") {
             let cart: CartModel = CartModel.shared()
-            cart.setTitle(title: self.titleTextField.text!)
-            cart.setPreenchimento(preenchimento: self.fillTextField.text!)
-            cart.setEspessura(espessura: self.thicknessTextField.text!)
-            cart.setMaterial(material: self.materialTextField.text!)
-            cart.setQuantidade(quantidade: self.quantityTextField.text!)
+            cart.title = self.titleTextField.text!
+            cart.fill = fillsFloat[fillPickerView.selectedRow(inComponent: 0)]
+            cart.thickness = thicknessesFloat[thicknessPickerView.selectedRow(inComponent: 0)]
+            cart.material = materials[0][materialPickerView.selectedRow(inComponent: 0)]
+            cart.color = materials[1][materialPickerView.selectedRow(inComponent: 0)]
+            cart.quantity = Int(self.quantityTextField.text!)!
             if (self.modelImageView.image != nil) {
-                cart.setImage(image: self.modelImageView.image!)
+                cart.image = self.modelImageView.image!
             }
         }
     }
@@ -138,7 +140,7 @@ class NewOrderViewController: UIViewController {
         if (self.isMovingFromParentViewController) {
             print("Moving from parent")
             CartModel.shared().clearCart()
-            print(CartModel.shared().getTitle())
+            print(CartModel.shared().title)
         }
     }
     
@@ -215,6 +217,7 @@ extension NewOrderViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             self.currPickerView = "thickness"
         } else if (pickerView == self.materialPickerView) {
             self.currPickerView = "material"
+            return 2
         } else if (pickerView == self.quantityPickerView) {
             self.currPickerView = "quantity"
         }
@@ -227,7 +230,7 @@ extension NewOrderViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         } else if (pickerView == self.thicknessPickerView) {
             return thicknesses.count
         } else if (pickerView == self.materialPickerView) {
-            return materials.count
+            return materials[component].count
         } else if (pickerView == self.quantityPickerView) {
             return quantities.count
         }
@@ -240,7 +243,7 @@ extension NewOrderViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         } else if (pickerView == self.thicknessPickerView) {
             return thicknesses[row]
         } else if (pickerView == self.materialPickerView) {
-            return materials[row]
+            return materials[component][row]
         } else if (pickerView == self.quantityPickerView) {
             return String(quantities[row])
         }

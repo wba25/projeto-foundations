@@ -4,6 +4,8 @@
         <relationship name="order" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Order" inverseName="address" inverseEntity="Order" syncable="YES"/>
     </entity>
     <entity name="Job" representedClassName="Job" syncable="YES" codeGenerationType="class">
+        <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="updated_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="thing" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Thing" inverseName="job" inverseEntity="Thing" syncable="YES"/>
     </entity>
     <entity name="Order" representedClassName="Order" syncable="YES" codeGenerationType="class">
@@ -32,7 +34,7 @@
     <elements>
         <element name="Order" positionX="-389" positionY="-90" width="128" height="163"/>
         <element name="Thing" positionX="-182" positionY="-114" width="128" height="163"/>
-        <element name="Job" positionX="54" positionY="-90" width="128" height="60"/>
+        <element name="Job" positionX="54" positionY="-90" width="128" height="88"/>
         <element name="Payment" positionX="-677" positionY="45" width="128" height="60"/>
         <element name="Address" positionX="-675" positionY="-96" width="128" height="60"/>
     </elements>

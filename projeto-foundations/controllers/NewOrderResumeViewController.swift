@@ -28,6 +28,16 @@ class NewOrderResumeViewController: UIViewController {
             let thing = Thing(context: context)
             thing.image = cart.image
             thing.title = cart.title
+            thing.fill = cart.fill
+            thing.thickness = cart.thickness
+            thing.material = cart.material
+            thing.color = cart.color
+            
+            let order = Order(context: context)
+            thing.order = order
+            
+            let job = Job(context: context)
+            thing.job = job
 
             do {
                 try context.save()
