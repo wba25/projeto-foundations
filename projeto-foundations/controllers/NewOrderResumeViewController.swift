@@ -61,8 +61,7 @@ class NewOrderResumeViewController: UIViewController {
                 print(error.localizedDescription)
             }
             
-            navigationController?.popViewController(animated: true)
-            //nao funcionou
+            navigationController?.popToRootViewController(animated: true)
         }
     }
     
