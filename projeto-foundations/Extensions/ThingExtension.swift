@@ -25,6 +25,7 @@ extension Thing {
         setPrimitiveValue(Date(), forKey: "created_at")
         setPrimitiveValue(Date(), forKey: "updated_at")
         setPrimitiveValue("Solicitado", forKey: "status")
+        setPrimitiveValue("13.00", forKey: "price")
     }
     
 }
