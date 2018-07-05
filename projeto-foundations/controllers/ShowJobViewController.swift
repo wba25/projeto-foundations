@@ -12,6 +12,7 @@ class ShowJobViewController: UIViewController {
     
     @IBOutlet weak var jobImage: UIImageView!
     @IBOutlet weak var jobName: UILabel!
+    @IBOutlet weak var updateJobStatusButton: UIButton!
     
     var jobToShow:JobTableCell? = nil
 
@@ -33,7 +34,9 @@ class ShowJobViewController: UIViewController {
         }
     }
     
-
+    @IBAction func updateJobStatus(_ sender: UIButton) {
+    }
+    
     /*
     // MARK: - Navigation
 
