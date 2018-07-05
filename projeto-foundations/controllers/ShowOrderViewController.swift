@@ -10,8 +10,11 @@ import UIKit
 
 class ShowOrderViewController: UIViewController {
     
-    @IBOutlet weak var labelName: UILabel!
-    @IBOutlet weak var labelData: UILabel!
+    @IBOutlet weak var fillLabel: UILabel!
+    @IBOutlet weak var materialLabel: UILabel!
+    @IBOutlet weak var thickness: UILabel!
+    @IBOutlet weak var cardNumberLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var labelPrice: UILabel!
     
     @IBOutlet weak var labelStatus: UILabel!
@@ -31,8 +34,6 @@ class ShowOrderViewController: UIViewController {
     
     func loadOrder(){
         if let ord = self.orderToShow {
-            self.labelName.text = ord.name.text
-            self.labelData.text = ord.date.text
             self.labelStatus.text = ord.status.text
             self.imageTumbnail.image = ord.thumbnail.image
             self.labelPrice.text = String(ord.price)
