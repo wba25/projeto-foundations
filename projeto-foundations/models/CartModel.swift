@@ -26,6 +26,8 @@ class CartModel {
     var creditCard: String
     var cvv: String
     var price: String
+    var payment: Payment
+    var address: Address
     
     
     private static var sharedCart: CartModel = {
@@ -49,6 +51,8 @@ class CartModel {
         self.creditCard = ""
         self.cvv = ""
         self.price = ""
+        self.payment = Payment()
+        self.address = Address()
     }
     
     func clearCart () {
@@ -66,6 +70,8 @@ class CartModel {
         self.creditCard = ""
         self.cvv = ""
         self.price = ""
+        self.payment = Payment()
+        self.address = Address()
     }
     
     class func shared() -> CartModel {
