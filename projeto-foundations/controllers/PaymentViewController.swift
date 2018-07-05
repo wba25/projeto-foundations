@@ -8,8 +8,21 @@
 
 import UIKit
 
-class PaymentViewController: UIViewController {
+struct Pagamento {
+    var cardNumber: String
+    var date: String
+    var cardFlag: UIImage
+    init(cardNumber: String, date: String, cardFlag: UIImage) {
+        self.cardNumber = cardNumber
+        self.date = date
+        self.cardFlag = cardFlag
+    }
+}
 
+class PaymentViewController: UIViewController {
+    
+    var formasDePagamento: [Pagamento] = [Pagamento(cardNumber: "1234 5678 9101", date: "12/22", cardFlag: #imageLiteral(resourceName: "MasterCardFlag")),Pagamento(cardNumber: "567 8910 1112", date: "10/24", cardFlag: #imageLiteral(resourceName: "VisaFlag"))]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,3 +46,25 @@ class PaymentViewController: UIViewController {
     */
 
 }
+
+extension PaymentViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return formasDePagamento.count + 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if (indexPath.row != formasDePagamento.count){
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PaymentTableViewCell", for: indexPath) as! PaymentTableViewCell
+            cell.prepare(with: formasDePagamento[indexPath.row])
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AddPaymentTableViewCell", for: indexPath) as! AddPaymentTableViewCell
+            cell.prepare(with: formasDePagamento[indexPath.row])
+            return cell
+        }
+        
+    }
+    
+    
+}
+

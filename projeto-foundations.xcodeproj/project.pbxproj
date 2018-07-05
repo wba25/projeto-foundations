@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		18163E7020EE4F3400148A31 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18163E6F20EE4F3400148A31 /* PaymentViewController.swift */; };
+		18163E7220EE523900148A31 /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18163E7120EE523900148A31 /* PaymentTableViewCell.swift */; };
+		18163E7420EE5AF700148A31 /* AddPaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18163E7320EE5AF700148A31 /* AddPaymentTableViewCell.swift */; };
 		364576B420E3D72B005E800A /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364576B320E3D72B005E800A /* JobModel.swift */; };
 		367E6A0920E535D200191D84 /* ShowOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367E6A0820E535D200191D84 /* ShowOrderViewController.swift */; };
 		36A2D2F820E3D380002FD00E /* JobTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A2D2F720E3D380002FD00E /* JobTableCell.swift */; };
@@ -55,6 +57,8 @@
 
 /* Begin PBXFileReference section */
 		18163E6F20EE4F3400148A31 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		18163E7120EE523900148A31 /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
+		18163E7320EE5AF700148A31 /* AddPaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentTableViewCell.swift; sourceTree = "<group>"; };
 		364576B320E3D72B005E800A /* JobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
 		367E6A0820E535D200191D84 /* ShowOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowOrderViewController.swift; sourceTree = "<group>"; };
 		36A2D2F720E3D380002FD00E /* JobTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableCell.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 				977BFED220EAFF560000DB6D /* NewOrderResumeViewController.swift */,
 				F4F21D5E20ED13EF006FA7ED /* SettingsViewController.swift */,
 				18163E6F20EE4F3400148A31 /* PaymentViewController.swift */,
+				18163E7320EE5AF700148A31 /* AddPaymentTableViewCell.swift */,
+				18163E7120EE523900148A31 /* PaymentTableViewCell.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -350,6 +356,7 @@
 				97F50F9820DA954000435DFC /* AppDelegate.swift in Sources */,
 				367E6A0920E535D200191D84 /* ShowOrderViewController.swift in Sources */,
 				364576B420E3D72B005E800A /* JobModel.swift in Sources */,
+				18163E7220EE523900148A31 /* PaymentTableViewCell.swift in Sources */,
 				97CC13E320ED73B400C8D4C2 /* UIViewControllerExtension.swift in Sources */,
 				97ED4EBA20E2C97C0031648C /* ThingModel.swift in Sources */,
 				97466DB720E11F310074F960 /* JobViewController.swift in Sources */,
@@ -357,6 +364,7 @@
 				97466DB920E128240074F960 /* NewOrderViewController.swift in Sources */,
 				97FE395C20E3D52D00DE94DF /* CartModel.swift in Sources */,
 				977BFED320EAFF560000DB6D /* NewOrderResumeViewController.swift in Sources */,
+				18163E7420EE5AF700148A31 /* AddPaymentTableViewCell.swift in Sources */,
 				97F50FC620DAA1AB00435DFC /* OrderTableCell.swift in Sources */,
 				97466DB320E11BCB0074F960 /* OrderViewController.swift in Sources */,
 				97ED4EB620E2C8C80031648C /* ThingCollectionViewCell.swift in Sources */,
