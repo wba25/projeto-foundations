@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
 class JobViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
 
     @IBOutlet weak var jobTableView: UITableView!
+    
+    var fetchedResultController: NSFetchedResultsController<Thing>!
+    var label = UILabel()
     
     lazy var jobs: [JobModel] = [
         JobModel(thumbnail:UIImage(named:"objeto-3d-1")!, id:1, name:"Cactus", price:150.0, created_at:"27/06/2018", updated_at:"27/06/2018", status: "Procurando impresssora"),
@@ -23,6 +27,11 @@ class JobViewController: UIViewController, UITableViewDataSource, UITableViewDel
         self.jobTableView.delegate = self
         self.jobTableView.dataSource = self
         // Do any additional setup after loading the view.
+        
+        label.text = "Não temos nenhuma demanda no momento."
+        label.textAlignment = .center
+        
+        loadOrders(with: context)
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,16 +40,27 @@ class JobViewController: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return jobs.count
+        //        return jobs.count
+        
+        let count = fetchedResultController.fetchedObjects?.count ?? 0
+        jobTableView.backgroundView = count == 0 ? label : nil
+        
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "jobCell", for: indexPath) as! JobTableCell
         
-        cell.thumbnail.image = jobs[indexPath.row].thumbnail
-        cell.name.text = jobs[indexPath.row].name
-        cell.date.text = jobs[indexPath.row].created_at
-        cell.price.text = String(jobs[indexPath.row].price)
+//        cell.thumbnail.image = jobs[indexPath.row].thumbnail
+//        cell.name.text = jobs[indexPath.row].name
+//        cell.date.text = jobs[indexPath.row].created_at
+//        cell.price.text = String(jobs[indexPath.row].price)
+        
+        guard let thing = fetchedResultController.fetchedObjects?[indexPath.row] else {
+            return cell
+        }
+        
+        cell.prepare(with: thing)
         
         return cell
     }
@@ -69,5 +89,32 @@ class JobViewController: UIViewController, UITableViewDataSource, UITableViewDel
             
         }
     }
+    
+    func loadOrders (with context: NSManagedObjectContext) {
+        let fetchRequest: NSFetchRequest<Thing> = Thing.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "updated_at", ascending: false)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        fetchedResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultController.delegate = self
+        
+        do {
+            try fetchedResultController.performFetch()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
 
+}
+
+extension JobViewController: NSFetchedResultsControllerDelegate {
+    func controller(_ controler: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        
+        switch type {
+        case .delete:
+            break
+        default:
+            jobTableView.reloadData()
+        }
+    }
 }

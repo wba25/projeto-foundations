@@ -33,19 +33,13 @@ class NewOrderResumeViewController: UIViewController {
             thing.material = cart.material
             thing.color = cart.color
             
-            let order = Order(context: context)
-            thing.order = order
-            
-            let job = Job(context: context)
-            thing.job = job
-
             do {
                 try context.save()
             } catch {
                 print(error.localizedDescription)
             }
             
-//            navigationController?.popViewController(animated: true)
+            navigationController?.popViewController(animated: true)
             //nao funcionou
         }
     }

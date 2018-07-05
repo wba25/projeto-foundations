@@ -23,6 +23,7 @@ extension Thing {
     
     override public func awakeFromInsert() {
         setPrimitiveValue(Date(), forKey: "created_at")
+        setPrimitiveValue(Date(), forKey: "updated_at")
     }
     
 }

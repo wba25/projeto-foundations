@@ -1,6 +1,10 @@
 import UIKit
+import CoreData
 
 class OrderViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var fetchedResultController: NSFetchedResultsController<Thing>!
+    var label = UILabel()
     
     @IBOutlet weak var pedidosTableView: UITableView!
     
@@ -16,6 +20,12 @@ class OrderViewController: UIViewController, UITableViewDataSource, UITableViewD
         super.viewDidLoad()
         self.pedidosTableView.delegate = self
         self.pedidosTableView.dataSource = self
+        
+        label.text = "Você ainda não fez nenhum pedido."
+        label.textAlignment = .center
+        
+        loadOrders(with: context)
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -25,16 +35,27 @@ class OrderViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return orders.count
+//        return orders.count
+        
+        let count = fetchedResultController.fetchedObjects?.count ?? 0
+        pedidosTableView.backgroundView = count == 0 ? label : nil
+        
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "orderCell", for: indexPath) as! OrderTableCell
+//
+//        cell.thumbnail.image = orders[indexPath.row].thumbnail
+//        cell.name.text = orders[indexPath.row].name
+//        cell.date.text = orders[indexPath.row].created_at
+//        cell.status.text = String(orders[indexPath.row].status)
         
-        cell.thumbnail.image = orders[indexPath.row].thumbnail
-        cell.name.text = orders[indexPath.row].name
-        cell.date.text = orders[indexPath.row].created_at
-        cell.status.text = String(orders[indexPath.row].status)
+        guard let thing = fetchedResultController.fetchedObjects?[indexPath.row] else {
+            return cell
+        }
+        
+        cell.prepare(with: thing)
         
         return cell
     }
@@ -68,11 +89,30 @@ class OrderViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        self.currOrder = orders[indexPath.row]
-//    }
-//    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        <#code#>
-//    }
+    func loadOrders (with context: NSManagedObjectContext) {
+        let fetchRequest: NSFetchRequest<Thing> = Thing.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "updated_at", ascending: false)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        fetchedResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultController.delegate = self
+        
+        do {
+            try fetchedResultController.performFetch()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+}
+
+extension OrderViewController: NSFetchedResultsControllerDelegate {
+    func controller(_ controler: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        
+        switch type {
+        case .delete:
+            break
+        default:
+            pedidosTableView.reloadData()
+        }
+    }
 }

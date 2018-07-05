@@ -14,4 +14,16 @@ class OrderTableCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var status: UILabel!
     @IBOutlet weak var date: UILabel!
+    
+    func prepare(with thing: Thing) {
+        name.text = thing.title
+        status.text = thing.status
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        date.text = formatter.string(from: thing.updated_at!)
+        if let image = thing.image as? UIImage {
+            thumbnail.image = image
+        }
+    }
 }
