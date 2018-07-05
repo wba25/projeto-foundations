@@ -48,6 +48,15 @@ class PaymentViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "paymentToAddressSegue" {
+            if let payments = fetchedResultController.fetchedObjects {
+                let cart = CartModel.shared()
+                cart.payment = payments[paymentsTableView.indexPathForSelectedRow!.row]
+            }
+        }
+    }
+    
 }
 
 extension PaymentViewController: UITableViewDelegate, UITableViewDataSource {
