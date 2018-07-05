@@ -8,7 +8,7 @@
 
 import CoreData
 
-extension Thing {
+extension Payment {
     
     override public func awakeFromInsert() {
         setPrimitiveValue(Date(), forKey: "created_at")
