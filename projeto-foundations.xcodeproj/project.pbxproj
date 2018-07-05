@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		364576B420E3D72B005E800A /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364576B320E3D72B005E800A /* Job.swift */; };
+		364576B420E3D72B005E800A /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364576B320E3D72B005E800A /* JobModel.swift */; };
 		367E6A0920E535D200191D84 /* ShowOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367E6A0820E535D200191D84 /* ShowOrderViewController.swift */; };
 		36A2D2F820E3D380002FD00E /* JobTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A2D2F720E3D380002FD00E /* JobTableCell.swift */; };
 		97466DB320E11BCB0074F960 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97466DB220E11BCB0074F960 /* OrderViewController.swift */; };
@@ -20,7 +20,7 @@
 		97CC13E320ED73B400C8D4C2 /* ViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC13E220ED73B400C8D4C2 /* ViewController+CoreData.swift */; };
 		97D105B720E2C81600A691AE /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D105B620E2C81600A691AE /* CategoryTableViewCell.swift */; };
 		97ED4EB620E2C8C80031648C /* ThingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ED4EB520E2C8C80031648C /* ThingCollectionViewCell.swift */; };
-		97ED4EB820E2C9720031648C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ED4EB720E2C9720031648C /* Category.swift */; };
+		97ED4EB820E2C9720031648C /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ED4EB720E2C9720031648C /* CategoryModel.swift */; };
 		97ED4EBA20E2C97C0031648C /* ThingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ED4EB920E2C97C0031648C /* ThingModel.swift */; };
 		97F50F9820DA954000435DFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F50F9720DA954000435DFC /* AppDelegate.swift */; };
 		97F50F9D20DA954000435DFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97F50F9B20DA954000435DFC /* Main.storyboard */; };
@@ -29,7 +29,7 @@
 		97F50FAD20DA954100435DFC /* projeto_foundationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F50FAC20DA954100435DFC /* projeto_foundationsTests.swift */; };
 		97F50FB820DA954100435DFC /* projeto_foundationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F50FB720DA954100435DFC /* projeto_foundationsUITests.swift */; };
 		97F50FC620DAA1AB00435DFC /* OrderTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F50FC520DAA1AB00435DFC /* OrderTableCell.swift */; };
-		97FE395C20E3D52D00DE94DF /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FE395B20E3D52D00DE94DF /* Cart.swift */; };
+		97FE395C20E3D52D00DE94DF /* CartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FE395B20E3D52D00DE94DF /* CartModel.swift */; };
 		F4D08F1D20E555AC00FF1A83 /* ShowJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D08F1C20E555AC00FF1A83 /* ShowJobViewController.swift */; };
 		F4F21D5F20ED13EF006FA7ED /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F21D5E20ED13EF006FA7ED /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -52,7 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		364576B320E3D72B005E800A /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		364576B320E3D72B005E800A /* JobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
 		367E6A0820E535D200191D84 /* ShowOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowOrderViewController.swift; sourceTree = "<group>"; };
 		36A2D2F720E3D380002FD00E /* JobTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableCell.swift; sourceTree = "<group>"; };
 		97466DB220E11BCB0074F960 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		97CC13E220ED73B400C8D4C2 /* ViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CoreData.swift"; sourceTree = "<group>"; };
 		97D105B620E2C81600A691AE /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		97ED4EB520E2C8C80031648C /* ThingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingCollectionViewCell.swift; sourceTree = "<group>"; };
-		97ED4EB720E2C9720031648C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		97ED4EB720E2C9720031648C /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		97ED4EB920E2C97C0031648C /* ThingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingModel.swift; sourceTree = "<group>"; };
 		97F50F9420DA954000435DFC /* projeto-foundations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "projeto-foundations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97F50F9720DA954000435DFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 		97F50FB720DA954100435DFC /* projeto_foundationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projeto_foundationsUITests.swift; sourceTree = "<group>"; };
 		97F50FB920DA954100435DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97F50FC520DAA1AB00435DFC /* OrderTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableCell.swift; sourceTree = "<group>"; };
-		97FE395B20E3D52D00DE94DF /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		97FE395B20E3D52D00DE94DF /* CartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartModel.swift; sourceTree = "<group>"; };
 		F4D08F1C20E555AC00FF1A83 /* ShowJobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowJobViewController.swift; sourceTree = "<group>"; };
 		F4F21D5E20ED13EF006FA7ED /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,10 +129,10 @@
 			isa = PBXGroup;
 			children = (
 				97CB544E20E113D8006E57A9 /* OrderModel.swift */,
-				97ED4EB720E2C9720031648C /* Category.swift */,
+				97ED4EB720E2C9720031648C /* CategoryModel.swift */,
 				97ED4EB920E2C97C0031648C /* ThingModel.swift */,
-				364576B320E3D72B005E800A /* Job.swift */,
-				97FE395B20E3D52D00DE94DF /* Cart.swift */,
+				364576B320E3D72B005E800A /* JobModel.swift */,
+				97FE395B20E3D52D00DE94DF /* CartModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -330,17 +330,17 @@
 				F4D08F1D20E555AC00FF1A83 /* ShowJobViewController.swift in Sources */,
 				9785373C20E5C0F700F1C185 /* 3DTIZE.xcdatamodeld in Sources */,
 				97466DB520E11F1F0074F960 /* HomeViewController.swift in Sources */,
-				97ED4EB820E2C9720031648C /* Category.swift in Sources */,
+				97ED4EB820E2C9720031648C /* CategoryModel.swift in Sources */,
 				F4F21D5F20ED13EF006FA7ED /* SettingsViewController.swift in Sources */,
 				97F50F9820DA954000435DFC /* AppDelegate.swift in Sources */,
 				367E6A0920E535D200191D84 /* ShowOrderViewController.swift in Sources */,
-				364576B420E3D72B005E800A /* Job.swift in Sources */,
+				364576B420E3D72B005E800A /* JobModel.swift in Sources */,
 				97CC13E320ED73B400C8D4C2 /* ViewController+CoreData.swift in Sources */,
 				97ED4EBA20E2C97C0031648C /* ThingModel.swift in Sources */,
 				97466DB720E11F310074F960 /* JobViewController.swift in Sources */,
 				97CB544F20E113D8006E57A9 /* OrderModel.swift in Sources */,
 				97466DB920E128240074F960 /* NewOrderViewController.swift in Sources */,
-				97FE395C20E3D52D00DE94DF /* Cart.swift in Sources */,
+				97FE395C20E3D52D00DE94DF /* CartModel.swift in Sources */,
 				977BFED320EAFF560000DB6D /* NewOrderResumeViewController.swift in Sources */,
 				97F50FC620DAA1AB00435DFC /* OrderTableCell.swift in Sources */,
 				97466DB320E11BCB0074F960 /* OrderViewController.swift in Sources */,

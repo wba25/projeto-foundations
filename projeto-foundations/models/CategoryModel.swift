@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Category {
+class CategoryModel {
     
     var name: String
     var things: [ThingModel]

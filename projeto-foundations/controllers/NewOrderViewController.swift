@@ -120,7 +120,7 @@ class NewOrderViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if (segue.identifier == "newOrderSettingsSegue") {
-            let cart: Cart = Cart.shared()
+            let cart: CartModel = CartModel.shared()
             cart.setTitle(title: self.titleTextField.text!)
             cart.setPreenchimento(preenchimento: self.fillTextField.text!)
             cart.setEspessura(espessura: self.thicknessTextField.text!)
@@ -137,8 +137,8 @@ class NewOrderViewController: UIViewController {
         
         if (self.isMovingFromParentViewController) {
             print("Moving from parent")
-            Cart.shared().clearCart()
-            print(Cart.shared().getTitle())
+            CartModel.shared().clearCart()
+            print(CartModel.shared().getTitle())
         }
     }
     

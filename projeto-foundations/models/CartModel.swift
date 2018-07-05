@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Cart {
+class CartModel {
     
     var title: String
     var image: UIImage
@@ -27,8 +27,8 @@ class Cart {
     var price: String
     
     
-    private static var sharedCart: Cart = {
-        let cart = Cart()
+    private static var sharedCart: CartModel = {
+        let cart = CartModel()
         return cart
     }()
     
@@ -66,7 +66,7 @@ class Cart {
         self.price = ""
     }
     
-    class func shared() -> Cart {
+    class func shared() -> CartModel {
         return sharedCart
     }
     

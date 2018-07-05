@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Job {
+class JobModel {
     
     var thumbnail: UIImage
     var id: Int

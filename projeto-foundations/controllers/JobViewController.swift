@@ -12,10 +12,10 @@ class JobViewController: UIViewController, UITableViewDataSource, UITableViewDel
 
     @IBOutlet weak var jobTableView: UITableView!
     
-    lazy var jobs: [Job] = [
-        Job(thumbnail:UIImage(named:"objeto-3d-1")!, id:1, name:"Cactus", price:150.0, created_at:"27/06/2018", updated_at:"27/06/2018", status: "Procurando impresssora"),
-        Job(thumbnail:UIImage(named:"objeto-3d-2")!, id:1, name:"Iron-Man", price:250.0, created_at:"26/06/2018", updated_at:"26/06/2018", status: "Procurando impresssora"),
-        Job(thumbnail:UIImage(named:"objeto-3d-3")!, id:1, name:"Robozim", price:350.0, created_at:"26/06/2018", updated_at:"26/06/2018", status: "Procurando impresssora")
+    lazy var jobs: [JobModel] = [
+        JobModel(thumbnail:UIImage(named:"objeto-3d-1")!, id:1, name:"Cactus", price:150.0, created_at:"27/06/2018", updated_at:"27/06/2018", status: "Procurando impresssora"),
+        JobModel(thumbnail:UIImage(named:"objeto-3d-2")!, id:1, name:"Iron-Man", price:250.0, created_at:"26/06/2018", updated_at:"26/06/2018", status: "Procurando impresssora"),
+        JobModel(thumbnail:UIImage(named:"objeto-3d-3")!, id:1, name:"Robozim", price:350.0, created_at:"26/06/2018", updated_at:"26/06/2018", status: "Procurando impresssora")
     ]
     
     override func viewDidLoad() {

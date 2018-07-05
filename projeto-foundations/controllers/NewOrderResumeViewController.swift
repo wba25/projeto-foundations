@@ -22,7 +22,7 @@ class NewOrderResumeViewController: UIViewController {
     }
     
     @IBAction func finalizeOrder(_ sender: UIButton) {
-        let cart = Cart.shared()
+        let cart = CartModel.shared()
         
         if (cart.isSavable()) {
             let thing = Thing(context: context)
