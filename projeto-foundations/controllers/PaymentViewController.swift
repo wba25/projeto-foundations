@@ -35,7 +35,8 @@ class PaymentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+   
+    
     /*
     // MARK: - Navigation
 
@@ -50,21 +51,15 @@ class PaymentViewController: UIViewController {
 
 extension PaymentViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (formasDePagamento.count + 1)
+        return formasDePagamento.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if (indexPath.row != formasDePagamento.count){
-            print("entrou")
-            let cell = tableView.dequeueReusableCell(withIdentifier: "PaymentTableViewCell", for: indexPath) as! PaymentTableViewCell
-            print("Passou")
-            cell.prepare(with: formasDePagamento[indexPath.row])
-            return cell
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "AddPaymentTableViewCell", for: indexPath) as! AddPaymentTableViewCell
-            return cell
-        }
-        
+        print("entrou")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PaymentTableViewCell", for: indexPath) as! PaymentTableViewCell
+        print("Passou")
+        cell.prepare(with: formasDePagamento[indexPath.row])
+        return cell
     }
     
     
