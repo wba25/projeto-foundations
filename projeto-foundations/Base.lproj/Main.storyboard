@@ -664,7 +664,7 @@
                                         <connections>
                                             <outlet property="cardFlagImage" destination="NRn-4k-LIV" id="79I-fm-qzg"/>
                                             <outlet property="numberCardLabel" destination="Xh8-Yp-57N" id="57r-Tl-Dwv"/>
-                                            <segue destination="A0U-BY-0Be" kind="show" id="z17-jn-diN"/>
+                                            <segue destination="A0U-BY-0Be" kind="show" identifier="paymentToAddressSegue" id="z17-jn-diN"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -800,7 +800,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="addressLabel" destination="w6k-aR-bh7" id="83n-Mq-XUL"/>
-                                            <segue destination="mbL-x5-zfg" kind="show" id="Sta-yU-e6J"/>
+                                            <segue destination="mbL-x5-zfg" kind="show" identifier="addressToResumeSegue" id="Sta-yU-e6J"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -922,23 +922,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEi-T9-QkB">
-                                <rect key="frame" x="159" y="479" width="57" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZGg-eo-GYH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Finalizar"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEi-T9-QkB">
+                                <rect key="frame" x="20" y="490" width="343" height="48"/>
+                                <color key="backgroundColor" name="orangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="VdG-MV-B1L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <state key="normal" title="Finalizar">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="finalizeOrder:" destination="mbL-x5-zfg" eventType="touchUpInside" id="rBh-M7-GYh"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QEi-T9-QkB" firstAttribute="leading" secondItem="vGe-lM-bLK" secondAttribute="leading" constant="20" id="3so-dK-VhM"/>
+                            <constraint firstAttribute="trailing" secondItem="QEi-T9-QkB" secondAttribute="trailing" constant="12" id="euP-hU-DoK"/>
+                            <constraint firstItem="pZs-wl-nLs" firstAttribute="bottom" secondItem="QEi-T9-QkB" secondAttribute="bottom" constant="16" id="m9n-oV-xbR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pZs-wl-nLs"/>
                     </view>
                     <navigationItem key="navigationItem" title="Resumo" id="IMN-mQ-ulA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KcC-sD-kOS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4" y="1511"/>
+            <point key="canvasLocation" x="4" y="1510.7946026986508"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="EW9-wa-Lbg">
@@ -1174,6 +1189,9 @@
         <image name="menu-orange-24x24" width="30" height="30"/>
         <image name="settings-orange-36x36" width="36" height="36"/>
         <image name="shopping-cart-orange" width="36" height="36"/>
+        <namedColor name="orangeColor">
+            <color red="0.85500001907348633" green="0.47499999403953552" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="orangeColor">
             <color red="0.85500001907348633" green="0.47499999403953552" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
