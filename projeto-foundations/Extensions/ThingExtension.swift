@@ -1,5 +1,5 @@
 //
-//  OrderExtension.swift
+//  ThingExtension.swift
 //  projeto-foundations
 //
 //  Created by Lucas Biagini on 05/07/18.
@@ -8,7 +8,7 @@
 
 import CoreData
 
-extension Order {
+extension Thing {
     
     override public func willSave() {
         if let updated_at = updated_at {

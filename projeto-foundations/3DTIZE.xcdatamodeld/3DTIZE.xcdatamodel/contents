@@ -1,41 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Address" representedClassName="Address" syncable="YES" codeGenerationType="class">
-        <relationship name="order" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Order" inverseName="address" inverseEntity="Order" syncable="YES"/>
-    </entity>
-    <entity name="Job" representedClassName="Job" syncable="YES" codeGenerationType="class">
-        <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="updated_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <relationship name="thing" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Thing" inverseName="job" inverseEntity="Thing" syncable="YES"/>
-    </entity>
-    <entity name="Order" representedClassName="Order" syncable="YES" codeGenerationType="class">
-        <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="updated_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <relationship name="address" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Address" inverseName="order" inverseEntity="Address" syncable="YES"/>
-        <relationship name="payment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Payment" inverseName="order" inverseEntity="Payment" syncable="YES"/>
-        <relationship name="thing" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Thing" inverseName="order" inverseEntity="Thing" syncable="YES"/>
+        <relationship name="thing" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Thing" inverseName="address" inverseEntity="Thing" syncable="YES"/>
     </entity>
     <entity name="Payment" representedClassName="Payment" syncable="YES" codeGenerationType="class">
-        <relationship name="order" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Order" inverseName="payment" inverseEntity="Order" syncable="YES"/>
+        <relationship name="thing" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Thing" inverseName="payment" inverseEntity="Thing" syncable="YES"/>
     </entity>
     <entity name="Thing" representedClassName="Thing" syncable="YES" codeGenerationType="class">
         <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="fill" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="material" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="thickness" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="job" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Job" inverseName="thing" inverseEntity="Job" syncable="YES"/>
-        <relationship name="order" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Order" inverseName="thing" inverseEntity="Order" syncable="YES"/>
+        <attribute name="updated_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="address" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Address" inverseName="thing" inverseEntity="Address" syncable="YES"/>
+        <relationship name="payment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Payment" inverseName="thing" inverseEntity="Payment" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Order" positionX="-389" positionY="-90" width="128" height="163"/>
-        <element name="Thing" positionX="-182" positionY="-114" width="128" height="163"/>
-        <element name="Job" positionX="54" positionY="-90" width="128" height="88"/>
-        <element name="Payment" positionX="-677" positionY="45" width="128" height="60"/>
-        <element name="Address" positionX="-675" positionY="-96" width="128" height="60"/>
+        <element name="Thing" positionX="-162" positionY="-496" width="128" height="238"/>
+        <element name="Payment" positionX="63" positionY="-346" width="128" height="58"/>
+        <element name="Address" positionX="-414" positionY="-324" width="128" height="58"/>
     </elements>
 </model>

@@ -19,8 +19,7 @@
 		9785373C20E5C0F700F1C185 /* 3DTIZE.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9785373A20E5C0F700F1C185 /* 3DTIZE.xcdatamodeld */; };
 		97CB544F20E113D8006E57A9 /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CB544E20E113D8006E57A9 /* OrderModel.swift */; };
 		97CC13E320ED73B400C8D4C2 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC13E220ED73B400C8D4C2 /* UIViewControllerExtension.swift */; };
-		97CC13E620EE459800C8D4C2 /* OrderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC13E520EE459800C8D4C2 /* OrderExtension.swift */; };
-		97CC13E820EE45AD00C8D4C2 /* JobExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC13E720EE45AD00C8D4C2 /* JobExtension.swift */; };
+		97CC13EA20EE50E400C8D4C2 /* ThingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC13E920EE50E400C8D4C2 /* ThingExtension.swift */; };
 		97D105B720E2C81600A691AE /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D105B620E2C81600A691AE /* CategoryTableViewCell.swift */; };
 		97ED4EB620E2C8C80031648C /* ThingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ED4EB520E2C8C80031648C /* ThingCollectionViewCell.swift */; };
 		97ED4EB820E2C9720031648C /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ED4EB720E2C9720031648C /* CategoryModel.swift */; };
@@ -67,8 +66,7 @@
 		9785373B20E5C0F700F1C185 /* 3DTIZE.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 3DTIZE.xcdatamodel; sourceTree = "<group>"; };
 		97CB544E20E113D8006E57A9 /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		97CC13E220ED73B400C8D4C2 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
-		97CC13E520EE459800C8D4C2 /* OrderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderExtension.swift; sourceTree = "<group>"; };
-		97CC13E720EE45AD00C8D4C2 /* JobExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobExtension.swift; sourceTree = "<group>"; };
+		97CC13E920EE50E400C8D4C2 /* ThingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingExtension.swift; sourceTree = "<group>"; };
 		97D105B620E2C81600A691AE /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		97ED4EB520E2C8C80031648C /* ThingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingCollectionViewCell.swift; sourceTree = "<group>"; };
 		97ED4EB720E2C9720031648C /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
@@ -148,8 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				97CC13E220ED73B400C8D4C2 /* UIViewControllerExtension.swift */,
-				97CC13E520EE459800C8D4C2 /* OrderExtension.swift */,
-				97CC13E720EE45AD00C8D4C2 /* JobExtension.swift */,
+				97CC13E920EE50E400C8D4C2 /* ThingExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -344,13 +341,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				36A2D2F820E3D380002FD00E /* JobTableCell.swift in Sources */,
-				97CC13E620EE459800C8D4C2 /* OrderExtension.swift in Sources */,
 				F4D08F1D20E555AC00FF1A83 /* ShowJobViewController.swift in Sources */,
 				9785373C20E5C0F700F1C185 /* 3DTIZE.xcdatamodeld in Sources */,
 				97466DB520E11F1F0074F960 /* HomeViewController.swift in Sources */,
 				97ED4EB820E2C9720031648C /* CategoryModel.swift in Sources */,
 				F4F21D5F20ED13EF006FA7ED /* SettingsViewController.swift in Sources */,
-				97CC13E820EE45AD00C8D4C2 /* JobExtension.swift in Sources */,
+				97CC13EA20EE50E400C8D4C2 /* ThingExtension.swift in Sources */,
 				97F50F9820DA954000435DFC /* AppDelegate.swift in Sources */,
 				367E6A0920E535D200191D84 /* ShowOrderViewController.swift in Sources */,
 				364576B420E3D72B005E800A /* JobModel.swift in Sources */,
