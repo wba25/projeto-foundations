@@ -22,5 +22,9 @@ class AddressTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func prepare(with address: Address) {
+        addressLabel.text = address.rua! + " " + address.numero! + ", CEP " + address.cep!
+    }
 
 }

@@ -26,6 +26,7 @@
 		97CC13E320ED73B400C8D4C2 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC13E220ED73B400C8D4C2 /* UIViewControllerExtension.swift */; };
 		97CC13EA20EE50E400C8D4C2 /* ThingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC13E920EE50E400C8D4C2 /* ThingExtension.swift */; };
 		97CC13EE20EE966300C8D4C2 /* PaymentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC13ED20EE966300C8D4C2 /* PaymentExtension.swift */; };
+		97CC13F020EEB13C00C8D4C2 /* AddressExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC13EF20EEB13C00C8D4C2 /* AddressExtension.swift */; };
 		97D105B720E2C81600A691AE /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D105B620E2C81600A691AE /* CategoryTableViewCell.swift */; };
 		97ED4EB620E2C8C80031648C /* ThingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ED4EB520E2C8C80031648C /* ThingCollectionViewCell.swift */; };
 		97ED4EB820E2C9720031648C /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ED4EB720E2C9720031648C /* CategoryModel.swift */; };
@@ -79,6 +80,7 @@
 		97CC13E220ED73B400C8D4C2 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		97CC13E920EE50E400C8D4C2 /* ThingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingExtension.swift; sourceTree = "<group>"; };
 		97CC13ED20EE966300C8D4C2 /* PaymentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentExtension.swift; sourceTree = "<group>"; };
+		97CC13EF20EEB13C00C8D4C2 /* AddressExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressExtension.swift; sourceTree = "<group>"; };
 		97D105B620E2C81600A691AE /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		97ED4EB520E2C8C80031648C /* ThingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingCollectionViewCell.swift; sourceTree = "<group>"; };
 		97ED4EB720E2C9720031648C /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				97CC13E220ED73B400C8D4C2 /* UIViewControllerExtension.swift */,
 				97CC13E920EE50E400C8D4C2 /* ThingExtension.swift */,
 				97CC13ED20EE966300C8D4C2 /* PaymentExtension.swift */,
+				97CC13EF20EEB13C00C8D4C2 /* AddressExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				97F50FC620DAA1AB00435DFC /* OrderTableCell.swift in Sources */,
 				97466DB320E11BCB0074F960 /* OrderViewController.swift in Sources */,
 				97ED4EB620E2C8C80031648C /* ThingCollectionViewCell.swift in Sources */,
+				97CC13F020EEB13C00C8D4C2 /* AddressExtension.swift in Sources */,
 				97D105B720E2C81600A691AE /* CategoryTableViewCell.swift in Sources */,
 				18163E7020EE4F3400148A31 /* PaymentViewController.swift in Sources */,
 				18FA77DA20EE8F3F00483706 /* AddPaymentViewController.swift in Sources */,

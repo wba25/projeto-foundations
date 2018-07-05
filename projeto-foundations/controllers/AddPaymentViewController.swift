@@ -46,7 +46,6 @@ class AddPaymentViewController: UIViewController {
         }
         
         navigationController?.popViewController(animated: true)
-        //nao funcionou
     }
     /*
     // MARK: - Navigation

@@ -38,6 +38,19 @@ class AddAddressViewController: UIViewController {
     */
     
     @IBAction func addAddressButton(_ sender: Any) {
+        let address = Address(context: context)
+        address.rua = streetTextField.text!
+        address.numero = numberTextField.text!
+        address.cep = CEPTextField.text!
+        address.complemento = complementTextField.text!
+        
+        do {
+            try context.save()
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        navigationController?.popViewController(animated: true)
     }
     
 }

@@ -18,7 +18,7 @@ class PaymentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        label.text = "Você ainda não cadastrou nenhum método de pagamento."
+        label.text = "Você ainda não cadastrou nenhum cartãos."
         label.textAlignment = .center
         
         loadPayments(with: context)
