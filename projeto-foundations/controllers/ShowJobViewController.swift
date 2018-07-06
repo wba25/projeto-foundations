@@ -31,10 +31,58 @@ class ShowJobViewController: UIViewController {
         if let job = self.jobToShow {
             self.jobName.text = job.name.text
             self.jobImage.image = job.thumbnail.image
+            
+            let labelTitle = buttonLabel(status: job.thing.status!)
+            self.updateJobStatusButton.setTitle(labelTitle, for: [])
+            
+            if labelTitle == "Finalizado" {
+                self.updateJobStatusButton.isEnabled = false
+            }
         }
     }
     
     @IBAction func updateJobStatus(_ sender: UIButton) {
+        
+        if let job = self.jobToShow {
+            
+            let thing = job.thing
+            
+            if (thing.status != "Enviado") {
+                thing.status = nextJobStatus(status: thing.status!)
+                
+                do {
+                    try context.save()
+                } catch {
+                    print(error.localizedDescription)
+                }
+                
+                self.updateJobStatusButton.setTitle(buttonLabel(status: thing.status!), for: [])
+            }
+        }
+    }
+    
+    func nextJobStatus (status: String) -> String {
+        if status == "Solicitado" {
+            return "Pronto para imprimir"
+        } else if status == "Pronto para imprimir" {
+            return "Imprimindo"
+        } else { // status == Imprimindo    
+            return "Enviado"
+        }
+    }
+    
+    func buttonLabel (status: String) -> String {
+        if status == "Solicitado" {
+            return "Aceitar Demanda"
+        } else if status == "Pronto para imprimir" {
+            return "Começar Impressão"
+        } else if status == "Imprimindo" {
+            return "Impressão Encerrada"
+        } else if status == "Impresso" {
+            return "Produto Enviado"
+        } else { // status == "Enviado"
+            return "Finalizado" // teoricamente nunca vai entrar, botei só por ser obrigado a retornar algo
+        }
     }
     
     /*

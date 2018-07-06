@@ -15,9 +15,12 @@ class JobTableCell: UITableViewCell {
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var price: UILabel!
     
+    var thing: Thing = Thing()
+    
     func prepare(with thing: Thing) {
         name.text = thing.title
         price.text = String(thing.price)
+        self.thing = thing
         
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM/yyyy"

@@ -92,6 +92,7 @@ class JobViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     func loadOrders (with context: NSManagedObjectContext) {
         let fetchRequest: NSFetchRequest<Thing> = Thing.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "status != 'Enviado'")
         let sortDescriptor = NSSortDescriptor(key: "updated_at", ascending: false)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
